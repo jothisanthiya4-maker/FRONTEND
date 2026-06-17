@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Forms and Tables</title>
+</head>
+<body>
+<center>
+    <center>
+        <h1>HTML Forms and Tables Collection</h1>
+        <p>Student Registration, Employee Table, Login & Signup, College Admission, Product Details, and Resume Builder</p>
+    </center>
+
+    <hr>
+
+    <!-- Student Registration Form -->
+    <h2>1. Student Registration Form</h2>
+
+    <form>
+        <label>Full Name:</label><br>
+        <input type="text" placeholder="Enter Full Name"><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" placeholder="Enter Email"><br><br>
+
+        <label>Password:</label><br>
+        <input type="password" placeholder="Enter Password"><br><br>
+
+        <label>Phone Number:</label><br>
+        <input type="tel" placeholder="Enter Phone Number"><br><br>
+
+        <label>Date of Birth:</label><br>
+        <input type="date"><br><br>
+
+        <label>Age:</label><br>
+        <input type="number"><br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+        <input type="radio" name="gender"> Other
+        <br><br>
+
+        <label>Languages Known:</label><br>
+        <input type="checkbox"> English
+        <input type="checkbox"> Tamil
+        <input type="checkbox"> Hindi
+        <br><br>
+
+        <label>Department:</label><br>
+        <select>
+            <option>Select Department</option>
+            <option>CSE</option>
+            <option>IT</option>
+            <option>ECE</option>
+            <option>EEE</option>
+        </select>
+        <br><br>
+
+        <label>Address:</label><br>
+        <textarea rows="5" cols="40" placeholder="Enter Address"></textarea>
+        <br><br>
+
+        <input type="submit" value="Register">
+    </form>
+
+    <hr>
+
+    <!-- Employee Details Table -->
+    <h2>2. Employee Details Table</h2>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <th rowspan="2">Employee ID</th>
+            <th rowspan="2">Employee Name</th>
+            <th colspan="2">Department Details</th>
+            <th rowspan="2">Salary</th>
+        </tr>
+
+        <tr>
+            <th>Department</th>
+            <th>Location</th>
+        </tr>
+
+        <tr>
+            <td>101</td>
+            <td>Arun Kumar</td>
+            <td>HR</td>
+            <td>Chennai</td>
+            <td>35000</td>
+        </tr>
+
+        <tr>
+            <td>102</td>
+            <td>Priya</td>
+            <td>IT</td>
+            <td>Bangalore</td>
+            <td>50000</td>
+        </tr>
+
+        <tr>
+            <td>103</td>
+            <td>Rahul</td>
+            <td>Finance</td>
+            <td>Hyderabad</td>
+            <td>45000</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- Login Form -->
+    <h2>3. Login Form</h2>
+
+    <form>
+        <label>Username:</label><br>
+        <input type="text" required minlength="4" maxlength="20" placeholder="Enter Username">
+        <br><br>
+
+        <label>Password:</label><br>
+        <input type="password" required minlength="6" maxlength="12" placeholder="Enter Password">
+        <br><br>
+
+        <input type="submit" value="Login">
+    </form>
+
+    <br>
+
+    <!-- Signup Form -->
+    <h2>Signup Form</h2>
+
+    <form>
+        <label>Full Name:</label><br>
+        <input type="text" required placeholder="Enter Full Name">
+        <br><br>
+
+        <label>Email:</label><br>
+        <input type="email" required placeholder="Enter Email">
+        <br><br>
+
+        <label>Create Password:</label><br>
+        <input type="password" required minlength="8" maxlength="15" placeholder="Create Password">
+        <br><br>
+
+        <label>Confirm Password:</label><br>
+        <input type="password" required minlength="8" maxlength="15" placeholder="Confirm Password">
+        <br><br>
+
+        <input type="submit" value="Signup">
+    </form>
+
+    <hr>
+
+    <!-- College Admission Form -->
+    <h2>4. College Admission Form</h2>
+
+    <form>
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label>Student Name:</label><br>
+            <input type="text"><br><br>
+
+            <label>Father Name:</label><br>
+            <input type="text"><br><br>
+
+            <label>Email:</label><br>
+            <input type="email"><br><br>
+
+            <label>Phone:</label><br>
+            <input type="tel"><br><br>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Course Selection</legend>
+
+            <label>Select Course:</label><br>
+
+            <select>
+
+                <optgroup label="Engineering Courses">
+                    <option>CSE</option>
+                    <option>IT</option>
+                    <option>ECE</option>
+                    <option>Mechanical</option>
+                </optgroup>
+
+                <optgroup label="Arts Courses">
+                    <option>B.Com</option>
+                    <option>BBA</option>
+                    <option>BA English</option>
+                </optgroup>
+
+            </select>
+
+        </fieldset>
+
+        <br>
+
+        <input type="submit" value="Apply Now">
+
+    </form>
+
+    <hr>
+
+    <!-- Product Details Table -->
+    <h2>5. Product Details Table</h2>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+
+        <tr>
+            <th>Product Image</th>
+            <th>Product Name</th>
+            <th>Category</th>
+            <th>Stock</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+
+        <tr>
+            
+            <td>Laptop</td>
+            <td>Electronics</td>
+            <td>Available</td>
+            <td>15</td>
+            <td>₹55,000</td>
+        </tr>
+
+        <tr>
+           
+            <td>Smart Phone</td>
+            <td>Mobiles</td>
+            <td>Available</td>
+            <td>30</td>
+            <td>₹20,000</td>
+        </tr>
+
+        <tr>
+           
+            <td>Headphones</td>
+            <td>Accessories</td>
+            <td>Out of Stock</td>
+            <td>0</td>
+            <td>₹2,000</td>
+        </tr>
+
+    </table>
+
+    <hr>
+
+    <!-- Resume Builder Form -->
+    <h2>6. Resume Builder Form</h2>
+
+    <form>
+
+        <fieldset>
+            <legend>Personal Details</legend>
+
+            <label>Full Name:</label><br>
+            <input type="text"><br><br>
+
+            <label>Email:</label><br>
+            <input type="email"><br><br>
+
+            <label>Phone Number:</label><br>
+            <input type="tel"><br><br>
+
+            <label>Address:</label><br>
+            <textarea rows="4" cols="40"></textarea>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Education Details</legend>
+
+            <label>College Name:</label><br>
+            <input type="text"><br><br>
+
+            <label>Degree:</label><br>
+            <input type="text"><br><br>
+
+            <label>Year of Passing:</label><br>
+            <input type="number"><br><br>
+
+            <label>CGPA:</label><br>
+            <input type="text">
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Skills</legend>
+
+            <input type="checkbox"> HTML
+            <input type="checkbox"> CSS
+            <input type="checkbox"> JavaScript
+            <input type="checkbox"> Python
+            <input type="checkbox"> Java
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Experience</legend>
+
+            <label>Experience Details:</label><br>
+            <textarea rows="5" cols="50" placeholder="Enter Your Experience"></textarea>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Upload Resume</legend>
+
+            <label>Select Resume File:</label><br>
+            <input type="file">
+
+        </fieldset>
+
+        <br>
+
+        <input type="submit" value="Submit Resume">
+
+    </form>
+
+    <hr>
+
+   
+</center>
+</body>
+</html>

@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    background-color: rgb(92, 25, 155);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.child{
+    background-color: rgb(153, 102, 200);
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+button:hover{
+    background-color: rgb(221, 163, 250);
+}
+input:focus{
+    background-color: rgb(196, 149, 239);
+} 
+button{
+    padding: 10px;
+}
+input{
+    padding: 10px;
+}

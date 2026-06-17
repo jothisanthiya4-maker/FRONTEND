@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.parent{
+    background-color: blueviolet;
+    padding: 100px;
+    border: solid 3px rgb(65, 0, 126);
+    height: 600px;
+    width: 900px;
+    margin: 40px auto;
+    
+}
+.child{
+    background-color: lightblue;
+    padding: 10px;
+    text-align: center;
+   
+}
+.child-two{
+    padding: 20px;
+    background-color: rgb(94, 11, 172);
+    margin-top: 20px;
+}

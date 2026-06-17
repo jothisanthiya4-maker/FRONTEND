@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Tutorial — Complete Reference</title>
+  <link rel="stylesheet" href="../assets/css/css-tutorial.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>CSS <span>Tutorial</span> — Complete Reference Guide</h1>
+    <p>A structured walkthrough of all core CSS concepts with examples and explanations</p>
+    <div class="header-stats">
+      <div class="stat-item">
+        <span class="stat-num">16</span>
+        <span class="stat-label">Sections</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">60+</span>
+        <span class="stat-label">Properties</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Pure CSS</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <!-- ==================== SECTION 1 ==================== -->
+    <div class="section-block">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <span class="section-title">CSS Selectors</span>
+      </div>
+      <div class="section-body">
+
+        <div class="prop-item">
+          <div class="prop-name">Universal Selector — *</div>
+          <p class="prop-desc">Targets every single element on the page at once. Most commonly used to reset default browser spacing so you have a clean starting point.</p>
+          <div class="example-label">Example</div>
+          <div class="code-block">
+            <span class="sel">*</span> <span class="brace">{</span><br>
+            &nbsp;&nbsp;<span class="prop">margin</span>: <span class="val">0</span>;<br>
+            &nbsp;&nbsp;<span class="prop">padding</span>: <span class="val">0</span>;<br>
+            <span class="brace">}</span>
+          </div>
+        </div>
+
+        <div class="prop-item">
+          <div class="prop-name">Element Selector</div>
+          <p class="prop-desc">Selects all elements with the same HTML tag name. Every matching tag on the page receives the declared styles.</p>
+          <div class="example-label">Example</div>
+          <div class="code-block">
+            <span class="sel">p</span> <span class="brace">{</span><br>
+            &nbsp;&nbsp;<span class="prop">color</span>: <span class="val">blue</span>;<br>
+            <span class="brace">}</span>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">Class Selector — .name</div>
+            <p class="prop-desc">Targets elements sharing a class attribute. Multiple elements can carry the same class name.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block">
+              <span class="sel">.card</span> <span class="brace">{</span><br>
+              &nbsp;&nbsp;<span class="prop">background-color</span>: <span class="val">lightblue</span>;<br>
+              <span class="brace">}</span>
+            </div>
+          </div>
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">ID Selector — #name</div>
+            <p class="prop-desc">Targets a single unique element using its ID. An ID must appear only once per page.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block">
+              <span class="sel">#header</span> <span class="brace">{</span><br>
+              &nbsp;&nbsp;<span class="prop">background-color</span>: <span class="val">black</span>;<br>
+              <span class="brace">}</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:24px;" class="two-col">
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">Descendant Selector</div>
+            <p class="prop-desc">Selects elements nested anywhere inside another element using a space between selectors.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block">
+              <span class="sel">.container p</span> <span class="brace">{</span><br>
+              &nbsp;&nbsp;<span class="prop">color</span>: <span class="val">red</span>;<br>
+              <span class="brace">}</span>
+            </div>
+          </div>
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">Child Selector — &gt;</div>
+            <p class="prop-desc">Targets only direct children of a parent. Deeper nested elements are not affected.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block">
+              <span class="sel">.container &gt; p</span> <span class="brace">{</span><br>
+              &nbsp;&nbsp;<span class="prop">color</span>: <span class="val">green</span>;<br>
+              <span class="brace">}</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== SECTION 2 ==================== -->
+    <div class="section-block">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <span class="section-title">CSS Specificity</span>
+      </div>
+      <div class="section-body">
+
+        <div class="prop-item">
+          <div class="prop-name">What is Specificity?</div>
+          <p class="prop-desc">Specificity is the rule browsers use to decide which CSS style wins when multiple rules target the same element. The selector with the highest specificity always takes priority.</p>
+          <div class="example-label">Priority Order — Highest to Lowest</div>
+          <div style="margin-top:10px;">
+            <div class="spec-row">
+              <span class="spec-label">1,0,0,0</span>
+              <div class="spec-bar" style="background:#fce8e8; border:1px solid #e05252; color:#c03030; width:100%;">Inline Style — highest priority</div>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">0,1,0,0</span>
+              <div class="spec-bar" style="background:#fff8e6; border:1px solid #f0a500; color:#c88400; width:78%;">ID Selector — #id</div>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">0,0,1,0</span>
+              <div class="spec-bar" style="background:#e8f0fe; border:1px solid #1e3a5f; color:#1e3a5f; width:55%;">Class Selector — .class</div>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">0,0,0,1</span>
+              <div class="spec-bar" style="background:#f5f6fa; border:1px solid #ccc; color:#888; width:30%;">Element Selector — tag</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="prop-item">
+          <div class="prop-name">Specificity Example</div>
+          <p class="prop-desc">When the same element is targeted by an ID, a class, and a tag selector — the ID selector wins and red color is applied.</p>
+          <div class="example-label">Example</div>
+          <div class="code-block">
+            <span class="sel">#title</span> <span class="brace">{</span> <span class="prop">color</span>: <span class="val">red</span>; <span class="brace">}</span> <span class="note">/* wins */</span><br>
+            <span class="sel">.heading</span> <span class="brace">{</span> <span class="prop">color</span>: <span class="val">blue</span>; <span class="brace">}</span><br>
+            <span class="sel">h1</span> <span class="brace">{</span> <span class="prop">color</span>: <span class="val">green</span>; <span class="brace">}</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== SECTION 3 ==================== -->
+    <div class="section-block">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <span class="section-title">Typography</span>
+      </div>
+      <div class="section-body">
+        <div class="two-col">
+
+          <div class="prop-item">
+            <div class="prop-name">font-family</div>
+            <p class="prop-desc">Defines the typeface used for displaying text. Always include a generic fallback like sans-serif.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">p</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">font-family</span>: <span class="val">Arial, sans-serif</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">font-size</div>
+            <p class="prop-desc">Controls the size of text. Accepts px, rem, em, or % units.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">h1</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">font-size</span>: <span class="val">32px</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">font-weight</div>
+            <p class="prop-desc">Controls text thickness. Values: normal, bold, or numbers like 400, 600, 700.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">p</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">font-weight</span>: <span class="val">bold</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">text-align</div>
+            <p class="prop-desc">Aligns text horizontally. Values: left, right, center, justify.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">h1</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">text-align</span>: <span class="val">center</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">text-transform</div>
+            <p class="prop-desc">Changes capitalisation. Values: uppercase, lowercase, capitalize.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">h1</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">text-transform</span>: <span class="val">uppercase</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">line-height</div>
+            <p class="prop-desc">Controls vertical spacing between lines. A value of 1.6–1.8 improves readability.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">p</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">line-height</span>: <span class="val">1.8</span>;<br><span class="brace">}</span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SECTION 4 ==================== -->
+    <div class="section-block">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <span class="section-title">Size Properties</span>
+      </div>
+      <div class="section-body">
+        <div class="two-col">
+
+          <div class="prop-item">
+            <div class="prop-name">width</div>
+            <p class="prop-desc">Defines the horizontal size of an element from left to right.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">div</span> <span class="brace">{</span> <span class="prop">width</span>: <span class="val">300px</span>; <span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">height</div>
+            <p class="prop-desc">Defines the vertical size of an element from top to bottom.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">div</span> <span class="brace">{</span> <span class="prop">height</span>: <span class="val">200px</span>; <span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">min-width</div>
+            <p class="prop-desc">Sets the smallest width the element is allowed to shrink to.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">div</span> <span class="brace">{</span> <span class="prop">min-width</span>: <span class="val">250px</span>; <span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">max-width</div>
+            <p class="prop-desc">Sets the largest width the element is allowed to grow to.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">div</span> <span class="brace">{</span> <span class="prop">max-width</span>: <span class="val">600px</span>; <span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">min-height</div>
+            <p class="prop-desc">Prevents an element from shrinking below a minimum height.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">div</span> <span class="brace">{</span> <span class="prop">min-height</span>: <span class="val">200px</span>; <span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">max-height</div>
+            <p class="prop-desc">Restricts an element from growing beyond a maximum height.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">div</span> <span class="brace">{</span> <span class="prop">max-height</span>: <span class="val">500px</span>; <span class="brace">}</span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SECTION 5 ==================== -->
+    <div class="section-block">
+      <div class="section-header">
+        <span class="section-num">05</span>
+        <span class="section-title">Box Model</span>
+      </div>
+      <div class="section-body">
+
+        <div class="box-visual">
+          <div class="bm-margin">
+            <span class="bm-margin-lbl">margin</span>
+            <div class="bm-border">
+              <span class="bm-border-lbl">border</span>
+              <div class="bm-padding">
+                <span class="bm-padding-lbl">padding</span>
+                <div class="bm-content">content</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="prop-item">
+          <div class="prop-name">What is the Box Model?</div>
+          <p class="prop-desc">Every HTML element is treated as a rectangular box. It has four layers — Content (the actual data), Padding (inner space), Border (the outline), and Margin (outer space from other elements).</p>
+        </div>
+
+        <div class="two-col">
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">content area</div>
+            <p class="prop-desc">Holds the actual text or image. Width and height apply directly to this area.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">div</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">width</span>: <span class="val">300px</span>;<br>&nbsp;&nbsp;<span class="prop">height</span>: <span class="val">200px</span>;<br><span class="brace">}</span></div>
+          </div>
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">box-sizing</div>
+            <p class="prop-desc">border-box includes padding and border inside the declared width — prevents unexpected overflow.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">*</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">box-sizing</span>: <span class="val">border-box</span>;<br><span class="brace">}</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== SECTION 6 ==================== -->
+    <div class="section-block">
+      <div class="section-header">
+        <span class="section-num">06</span>
+        <span class="section-title">Padding and Margin</span>
+      </div>
+      <div class="section-body">
+        <div class="two-col">
+
+          <div class="prop-item">
+            <div class="prop-name">padding</div>
+            <p class="prop-desc">Adds inner space between the content and the border. Increases breathing room inside an element.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.card</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">padding</span>: <span class="val">20px</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">margin</div>
+            <p class="prop-desc">Adds outer space outside the border. Creates separation between elements on the page.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.card</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">margin</span>: <span class="val">20px</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">padding directions</div>
+            <p class="prop-desc">Apply padding individually to top, right, bottom, and left for precise control.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.card</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">padding-top</span>: <span class="val">10px</span>;<br>&nbsp;&nbsp;<span class="prop">padding-right</span>: <span class="val">20px</span>;<br>&nbsp;&nbsp;<span class="prop">padding-bottom</span>: <span class="val">10px</span>;<br>&nbsp;&nbsp;<span class="prop">padding-left</span>: <span class="val">20px</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">margin directions</div>
+            <p class="prop-desc">Apply margin individually to each side for precise spacing between specific elements.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.card</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">margin-top</span>: <span class="val">10px</span>;<br>&nbsp;&nbsp;<span class="prop">margin-right</span>: <span class="val">20px</span>;<br>&nbsp;&nbsp;<span class="prop">margin-bottom</span>: <span class="val">10px</span>;<br>&nbsp;&nbsp;<span class="prop">margin-left</span>: <span class="val">20px</span>;<br><span class="brace">}</span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SECTION 7 ==================== -->
+    <div class="section-block">
+      <div class="section-header">
+        <span class="section-num">07</span>
+        <span class="section-title">Border Properties</span>
+      </div>
+      <div class="section-body">
+        <div class="two-col">
+
+          <div class="prop-item">
+            <div class="prop-name">border</div>
+            <p class="prop-desc">Shorthand that sets width, style, and color of a border in one line.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.card</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">border</span>: <span class="val">2px solid black</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">border-width</div>
+            <p class="prop-desc">Controls the thickness of the border line surrounding an element.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.card</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">border-width</span>: <span class="val">5px</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">border-style</div>
+            <p class="prop-desc">Sets the appearance of the border. Values: solid, dashed, dotted, double, none.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.card</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">border-style</span>: <span class="val">dashed</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">border-radius</div>
+            <p class="prop-desc">Rounds the corners of an element. Used in cards, buttons, and modern UI designs.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.card</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">border-radius</span>: <span class="val">10px</span>;<br><span class="brace">}</span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SECTION 8 ==================== -->
+    <div class="section-block">
+      <div class="section-header">
+        <span class="section-num">08</span>
+        <span class="section-title">Display Property</span>
+      </div>
+      <div class="section-body">
+        <div class="two-col">
+
+          <div class="prop-item">
+            <div class="prop-name">display: block</div>
+            <p class="prop-desc">Takes up the full available width and always starts on a new line. Default for div, p, h1–h6.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">div</span> <span class="brace">{</span> <span class="prop">display</span>: <span class="val">block</span>; <span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">display: inline</div>
+            <p class="prop-desc">Takes only as much width as content needs. Does not start on a new line. Default for span, a.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">span</span> <span class="brace">{</span> <span class="prop">display</span>: <span class="val">inline</span>; <span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">display: inline-block</div>
+            <p class="prop-desc">Stays on same line but still allows width and height to be set.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">button</span> <span class="brace">{</span> <span class="prop">display</span>: <span class="val">inline-block</span>; <span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">display: none</div>
+            <p class="prop-desc">Completely hides the element and removes it from layout. It takes no space on the page.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.menu</span> <span class="brace">{</span> <span class="prop">display</span>: <span class="val">none</span>; <span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">display: flex</div>
+            <p class="prop-desc">Activates Flexbox — a one-dimensional layout system for rows or columns.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.container</span> <span class="brace">{</span> <span class="prop">display</span>: <span class="val">flex</span>; <span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">display: grid</div>
+            <p class="prop-desc">Activates CSS Grid — a two-dimensional layout system for rows and columns.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.container</span> <span class="brace">{</span> <span class="prop">display</span>: <span class="val">grid</span>; <span class="brace">}</span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SECTION 9 ==================== -->
+    <div class="section-block">
+      <div class="section-header">
+        <span class="section-num">09</span>
+        <span class="section-title">Flexbox</span>
+      </div>
+      <div class="section-body">
+
+        <div class="flex-demo">
+          <div class="flex-box">Item 1</div>
+          <div class="flex-box">Item 2</div>
+          <div class="flex-box">Item 3</div>
+          <div class="flex-box">Item 4</div>
+        </div>
+        <p class="demo-note">↑ Live demo — four items arranged using display: flex</p>
+
+        <div class="two-col">
+
+          <div class="prop-item">
+            <div class="prop-name">display: flex</div>
+            <p class="prop-desc">Turns the container into a flex container. All direct children become flex items arranged in a row by default.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.container</span> <span class="brace">{</span> <span class="prop">display</span>: <span class="val">flex</span>; <span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">flex-direction</div>
+            <p class="prop-desc">Sets direction items flow. row = horizontal (default), column = vertical.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.container</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">flex-direction</span>: <span class="val">row</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">justify-content</div>
+            <p class="prop-desc">Aligns items along the main axis. Values: flex-start, flex-end, center, space-between, space-around.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.container</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">justify-content</span>: <span class="val">center</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">align-items</div>
+            <p class="prop-desc">Aligns items along the cross axis. Commonly used for vertical centering.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.container</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">align-items</span>: <span class="val">center</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">flex-wrap</div>
+            <p class="prop-desc">Allows items to wrap onto multiple lines when there is not enough horizontal space.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.container</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">flex-wrap</span>: <span class="val">wrap</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">gap</div>
+            <p class="prop-desc">Creates uniform spacing between flex items. Cleaner than using margins on each item.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.container</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">gap</span>: <span class="val">20px</span>;<br><span class="brace">}</span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SECTION 10 ==================== -->
+    <div class="section-block">
+      <div class="section-header">
+        <span class="section-num">10</span>
+        <span class="section-title">CSS Grid</span>
+      </div>
+      <div class="section-body">
+
+        <div class="grid-demo">
+          <div class="grid-box">Col 1</div>
+          <div class="grid-box">Col 2</div>
+          <div class="grid-box">Col 3</div>
+          <div class="grid-box">Col 4</div>
+          <div class="grid-box">Col 5</div>
+          <div class="grid-box">Col 6</div>
+        </div>
+        <p class="demo-note">↑ Live demo — 3 column grid using grid-template-columns: 1fr 1fr 1fr</p>
+
+        <div class="two-col">
+
+          <div class="prop-item">
+            <div class="prop-name">display: grid</div>
+            <p class="prop-desc">Activates CSS Grid — a two-dimensional layout system controlling rows and columns simultaneously.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.container</span> <span class="brace">{</span> <span class="prop">display</span>: <span class="val">grid</span>; <span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">grid-template-columns</div>
+            <p class="prop-desc">Defines how many columns the grid has and their widths. The fr unit distributes space proportionally.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.container</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">grid-template-columns</span>: <span class="val">1fr 1fr 1fr</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">grid-template-rows</div>
+            <p class="prop-desc">Defines the number and height of rows inside the grid container.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.container</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">grid-template-rows</span>: <span class="val">100px 100px</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">gap</div>
+            <p class="prop-desc">Creates gutters between all grid rows and columns for a clean organised layout.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.container</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">gap</span>: <span class="val">20px</span>;<br><span class="brace">}</span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SECTION 11 ==================== -->
+    <div class="section-block">
+      <div class="section-header">
+        <span class="section-num">11</span>
+        <span class="section-title">CSS Units</span>
+      </div>
+      <div class="section-body">
+
+        <table class="unit-table">
+          <thead>
+            <tr>
+              <th>Unit</th>
+              <th>Type</th>
+              <th>Relative To</th>
+              <th>Best Used For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>px</td><td>Absolute</td><td>Fixed screen pixels</td><td>Borders, precise sizing</td></tr>
+            <tr><td>%</td><td>Relative</td><td>Parent element</td><td>Fluid widths, responsive layouts</td></tr>
+            <tr><td>rem</td><td>Relative</td><td>Root font size (html)</td><td>Font sizes, consistent spacing</td></tr>
+            <tr><td>em</td><td>Relative</td><td>Parent font size</td><td>Scalable components</td></tr>
+            <tr><td>vh</td><td>Relative</td><td>Viewport height</td><td>Full-screen sections</td></tr>
+            <tr><td>vw</td><td>Relative</td><td>Viewport width</td><td>Full-width elements</td></tr>
+          </tbody>
+        </table>
+
+        <div class="two-col">
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">px — pixels</div>
+            <p class="prop-desc">Fixed absolute unit. Gives exact precise control. Does not scale with user settings.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">h1</span> <span class="brace">{</span> <span class="prop">font-size</span>: <span class="val">32px</span>; <span class="brace">}</span></div>
+          </div>
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">vh &amp; vw</div>
+            <p class="prop-desc">Relative to the browser window. 100vh = full screen height. Great for hero sections.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">section</span> <span class="brace">{</span> <span class="prop">height</span>: <span class="val">100vh</span>; <span class="brace">}</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== SECTION 12 ==================== -->
+    <div class="section-block">
+      <div class="section-header">
+        <span class="section-num">12</span>
+        <span class="section-title">Background Properties</span>
+      </div>
+      <div class="section-body">
+        <div class="two-col">
+
+          <div class="prop-item">
+            <div class="prop-name">background-color</div>
+            <p class="prop-desc">Fills the background with a solid colour. Accepts colour names, hex, rgb, hsl values.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">div</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">background-color</span>: <span class="val">lightblue</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">background-image</div>
+            <p class="prop-desc">Places an image behind the content using the url() function with the image path.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">div</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">background-image</span>: <span class="val">url("image.jpg")</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">background-repeat</div>
+            <p class="prop-desc">Controls whether the background image tiles. Use no-repeat to prevent tiling.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">div</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">background-repeat</span>: <span class="val">no-repeat</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">background-size</div>
+            <p class="prop-desc">Controls the size of the background image. cover fills the entire container maintaining ratio.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">div</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">background-size</span>: <span class="val">cover</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">background-position</div>
+            <p class="prop-desc">Sets where the background image is placed. Values: center, top, bottom, left, right.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">div</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">background-position</span>: <span class="val">center</span>;<br><span class="brace">}</span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SECTION 13 ==================== -->
+    <div class="section-block">
+      <div class="section-header">
+        <span class="section-num">13</span>
+        <span class="section-title">Position Properties</span>
+      </div>
+      <div class="section-body">
+        <div class="two-col">
+
+          <div class="prop-item">
+            <div class="prop-name">position: relative</div>
+            <p class="prop-desc">Moves the element from its original place but still keeps that space reserved in the layout.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.box</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">position</span>: <span class="val">relative</span>;<br>&nbsp;&nbsp;<span class="prop">top</span>: <span class="val">20px</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">position: absolute</div>
+            <p class="prop-desc">Removes the element from the normal flow. Positions relative to the nearest positioned ancestor.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.box</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">position</span>: <span class="val">absolute</span>;<br>&nbsp;&nbsp;<span class="prop">top</span>: <span class="val">50px</span>;<br>&nbsp;&nbsp;<span class="prop">left</span>: <span class="val">50px</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">position: fixed</div>
+            <p class="prop-desc">Locks the element to the screen. Stays in the same position even when the user scrolls.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.button</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">position</span>: <span class="val">fixed</span>;<br>&nbsp;&nbsp;<span class="prop">bottom</span>: <span class="val">20px</span>;<br>&nbsp;&nbsp;<span class="prop">right</span>: <span class="val">20px</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">position: sticky</div>
+            <p class="prop-desc">Acts like relative until a scroll point is reached, then sticks like fixed. Perfect for navbars.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.navbar</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">position</span>: <span class="val">sticky</span>;<br>&nbsp;&nbsp;<span class="prop">top</span>: <span class="val">0</span>;<br><span class="brace">}</span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SECTION 14 ==================== -->
+    <div class="section-block">
+      <div class="section-header">
+        <span class="section-num">14</span>
+        <span class="section-title">Pseudo Classes</span>
+      </div>
+      <div class="section-body">
+
+        <div style="margin-bottom:16px;">
+          <button class="demo-btn">Hover me</button>
+          <button class="demo-btn">Click me</button>
+        </div>
+        <p class="demo-note">↑ Live demo — hover and click to see :hover and :active in action</p>
+
+        <div class="two-col">
+
+          <div class="prop-item">
+            <div class="prop-name">:hover</div>
+            <p class="prop-desc">Applies styles when the mouse pointer is placed over an element. Used on buttons, links, and cards.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">button:hover</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">background-color</span>: <span class="val">black</span>;<br>&nbsp;&nbsp;<span class="prop">color</span>: <span class="val">white</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">:active</div>
+            <p class="prop-desc">Applies styles at the moment an element is being clicked. Creates a pressed button effect.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">button:active</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">transform</span>: <span class="val">scale(0.95)</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">:focus</div>
+            <p class="prop-desc">Applies styles when an input or button receives keyboard or click focus.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">input:focus</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">border</span>: <span class="val">2px solid blue</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">:first-child &amp; :last-child</div>
+            <p class="prop-desc">Target the first or last child inside a parent. Great for removing borders on edge items.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block">
+              <span class="sel">li:first-child</span> <span class="brace">{</span> <span class="prop">color</span>: <span class="val">red</span>; <span class="brace">}</span><br>
+              <span class="sel">li:last-child</span> <span class="brace">{</span> <span class="prop">color</span>: <span class="val">green</span>; <span class="brace">}</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SECTION 15 ==================== -->
+    <div class="section-block">
+      <div class="section-header">
+        <span class="section-num">15</span>
+        <span class="section-title">Transition and Animation</span>
+      </div>
+      <div class="section-body">
+
+        <div style="background:#f5f6fa; border:1px solid #dde3ee; border-radius:6px; padding:20px; margin-bottom:16px;">
+          <div class="anim-demo-box">Pulsing</div>
+          <div class="anim-demo-box2">Sliding</div>
+        </div>
+        <p class="demo-note">↑ Live demo — CSS @keyframes animations running in real time</p>
+
+        <div class="two-col">
+
+          <div class="prop-item">
+            <div class="prop-name">transition</div>
+            <p class="prop-desc">Creates a smooth animated change between two states. Commonly used with :hover effects.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.card</span> <span class="brace">{</span> <span class="prop">transition</span>: <span class="val">0.3s</span>; <span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-name">transition-duration</div>
+            <p class="prop-desc">Specifies how long a transition takes. Values in seconds (s) or milliseconds (ms).</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.card</span> <span class="brace">{</span> <span class="prop">transition-duration</span>: <span class="val">1s</span>; <span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">transform</div>
+            <p class="prop-desc">Changes size, position, or rotation without affecting surrounding layout. Uses scale(), rotate(), translate().</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.card:hover</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">transform</span>: <span class="val">scale(1.1)</span>;<br><span class="brace">}</span></div>
+          </div>
+
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">animation</div>
+            <p class="prop-desc">Applies a @keyframes animation to an element. Requires name, duration, and iteration count.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block"><span class="sel">.box</span> <span class="brace">{</span><br>&nbsp;&nbsp;<span class="prop">animation</span>: <span class="val">move 2s infinite</span>;<br><span class="brace">}</span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SECTION 16 ==================== -->
+    <div class="section-block">
+      <div class="section-header">
+        <span class="section-num">16</span>
+        <span class="section-title">Media Queries</span>
+      </div>
+      <div class="section-body">
+
+        <div class="prop-item">
+          <div class="prop-name">What are Media Queries?</div>
+          <p class="prop-desc">Media queries let you write different CSS rules that activate only when certain screen conditions are met — such as screen width being under 768px. They are the foundation of every responsive website.</p>
+          <div class="example-label">Example</div>
+          <div class="code-block">
+            <span class="sel">@media</span>(<span class="prop">max-width</span>: <span class="val">768px</span>) <span class="brace">{</span><br>
+            &nbsp;&nbsp;<span class="note">/* styles applied on screens smaller than 768px */</span><br>
+            <span class="brace">}</span>
+          </div>
+        </div>
+
+        <div class="two-col">
+
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">Responsive Text</div>
+            <p class="prop-desc">Reduce font sizes on smaller screens to keep headings from overflowing on mobile devices.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block">
+              <span class="sel">@media</span>(<span class="prop">max-width</span>: <span class="val">768px</span>) <span class="brace">{</span><br>
+              &nbsp;&nbsp;<span class="sel">h1</span> <span class="brace">{</span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="prop">font-size</span>: <span class="val">24px</span>;<br>
+              &nbsp;&nbsp;<span class="brace">}</span><br>
+              <span class="brace">}</span>
+            </div>
+          </div>
+
+          <div class="prop-item" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+            <div class="prop-name">Responsive Layout</div>
+            <p class="prop-desc">Switch a flex row layout to column on small screens so content stacks vertically instead of overflowing.</p>
+            <div class="example-label">Example</div>
+            <div class="code-block">
+              <span class="sel">@media</span>(<span class="prop">max-width</span>: <span class="val">768px</span>) <span class="brace">{</span><br>
+              &nbsp;&nbsp;<span class="sel">.container</span> <span class="brace">{</span><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="prop">flex-direction</span>: <span class="val">column</span>;<br>
+              &nbsp;&nbsp;<span class="brace">}</span><br>
+              <span class="brace">}</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    CSS Tutorial — Complete Reference &nbsp;|&nbsp; <span>16 Sections</span> &nbsp;|&nbsp; <span>60+ Properties</span> &nbsp;|&nbsp; Fullstack Development Course &nbsp;|&nbsp; <span>2025</span>
+  </div>
+
+</body>
+</html>

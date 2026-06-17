@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Array and Objects</h1>
+    </center>
+
+
+    <script>
+
+        // task 1
+
+        function greet(){
+            console.log('welcome to javascript');
+            
+        }
+
+        greet()
+
+        // task 2
+
+        const name="jothi"
+        function showName(){ 
+            console.log(name);   
+        }
+
+        showName()
+
+        // task 3
+
+        function addNumbers(){
+            console.log('10 + 20 =',10+20);
+            
+        }
+        addNumbers()
+
+        // task 4
+
+        function square(){
+            console.log('square of 5 is',5**2);
+            
+        }
+
+        square()
+
+        // task 5
+
+        function studentInfo(){
+            console.log('name is - jothi');
+            console.log('course is - fullstack');
+            console.log('city is - chennai'); 
+        }
+        studentInfo()
+
+        // task 6
+
+        let fruits=["apple","mango","banana","kiwi","strawberry"]
+        console.log(fruits);
+        
+
+        // task 7
+
+        let student=["jothi","faitha","divya","dilaka","anushya"]
+        console.log(student[0]);
+
+        // task 8
+
+        let arr=[10,20,30,40,50]
+        console.log(arr[arr.length -1]);
+
+        //  last 9
+
+        let arr2=[]
+        arr2[0]="html"
+        arr2[1]="css"
+        arr2[2]="javascript"
+
+        console.log(arr2);
+        
+        // task 10
+
+        function arr3(){
+            let arr3=["red","white","yellow","blue","green"]
+            for (let i=0;i<arr3.length;i++){
+                console.log(arr3[i]);
+                
+            }
+
+        }
+        arr3()
+
+        // task 11
+
+        let obj={name:"jothi",age:21,course:"fullstack"}
+        console.log(obj);
+
+        // task 12
+
+        let obj2={empname:"jothi",empsalary:40000}
+        console.log(obj2.empname);
+
+        // task 13
+
+        let obj3={brand:"vivo",model:25,price:20000}
+        console.log(obj3["price"]);
+        
+        // task 14
+
+        let obj4={brand:"bmw",model:2025}
+        for(let i in obj4){
+            console.log(obj4[i]);
+            
+        }
+
+        // task 15
+
+        let obj5={college:"vv college",location:"thisayanvilai",students:45}
+        for (let i in obj5){
+            console.log(obj5[i]);
+            
+        }
+        
+        // final task
+
+        function final(){
+            let name=["sudhan","rahul","kumar"]
+            console.log(name);
+            let obj6={course:"mern",duration:"6 month"}
+            console.log(obj6);
+            
+        }
+        final()
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="grid md:grid-cols-5 min-h-screen">
+
+
+
+        <div class="bg-slate-900 text-white p-6 flex flex-col justify-between">
+
+            <div>
+
+                <h1 class="text-3xl font-bold mb-10">
+                    AdminPanel
+                </h1>
+
+                <ul class="space-y-4">
+
+                    <li class="bg-blue-600 p-3 rounded-lg">
+                        Dashboard
+                    </li>
+
+                    <li class="hover:bg-slate-700 p-3 rounded-lg cursor-pointer">
+                        Users
+                    </li>
+
+                    <li class="hover:bg-slate-700 p-3 rounded-lg cursor-pointer">
+                        Courses
+                    </li>
+
+                    <li class="hover:bg-slate-700 p-3 rounded-lg cursor-pointer">
+                        Reports
+                    </li>
+
+                    <li class="hover:bg-slate-700 p-3 rounded-lg cursor-pointer">
+                        Settings
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="border-t border-gray-700 pt-5">
+
+                <h2 class="font-bold">
+                    Admin
+                </h2>
+
+                <p class="text-gray-400 text-sm">
+                    admin@gmail.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="md:col-span-4 p-6">
+
+
+
+
+            <div class="bg-white p-5 rounded-lg shadow flex justify-between items-center mb-8">
+
+                <h1 class="text-3xl font-bold">
+                    Dashboard
+                </h1>
+
+                <div class="flex gap-4 items-center">
+
+                    <button class="text-2xl">
+                        🔔
+                    </button>
+
+                    <div class="h-7 w-7 rounded-full bg-gray-300">
+                        <img src="../assets/user (1).png" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+
+                <div class="bg-white p-6 rounded-xl shadow">
+
+                    <p class="text-gray-500">
+                        Total Users
+                    </p>
+
+                    <h2 class="text-3xl font-bold mt-2">
+                        1,248
+                    </h2>
+
+                    <p class="text-green-600 mt-2">
+                        +12%
+                    </p>
+
+                </div>
+
+
+
+                <div class="bg-white p-6 rounded-xl shadow">
+
+                    <p class="text-gray-500">
+                        Total Courses
+                    </p>
+
+                    <h2 class="text-3xl font-bold mt-2">
+                        320
+                    </h2>
+
+                    <p class="text-green-600 mt-2">
+                        +8%
+                    </p>
+
+                </div>
+
+
+
+                <div class="bg-white p-6 rounded-xl shadow">
+
+                    <p class="text-gray-500">
+                        Enrollments
+                    </p>
+
+                    <h2 class="text-3xl font-bold mt-2">
+                        5,678
+                    </h2>
+
+                    <p class="text-green-600 mt-2">
+                        +15%
+                    </p>
+
+                </div>
+
+
+
+                <div class="bg-white p-6 rounded-xl shadow">
+
+                    <p class="text-gray-500">
+                        Revenue
+                    </p>
+
+                    <h2 class="text-3xl font-bold mt-2">
+                        ₹50K
+                    </h2>
+
+                    <p class="text-green-600 mt-2">
+                        +10%
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+            <div class="bg-white rounded-xl shadow p-6 overflow-auto">
+
+                <div class="flex justify-between mb-5">
+
+                    <h2 class="text-2xl font-bold">
+                        Recent Users
+                    </h2>
+
+                    <button class="text-blue-600">
+                        View All
+                    </button>
+
+                </div>
+
+
+                <table class="w-full">
+
+                    <tr class="border-b">
+
+                        <th class="p-4 text-left">
+                            ID
+                        </th>
+
+                        <th class="p-4 text-left">
+                            Name
+                        </th>
+
+                        <th class="p-4 text-left">
+                            Email
+                        </th>
+
+                        <th class="p-4 text-left">
+                            Role
+                        </th>
+
+                        <th class="p-4 text-left">
+                            Status
+                        </th>
+
+                    </tr>
+
+
+                    <tr class="border-b">
+
+                        <td class="p-4">
+                            #001
+                        </td>
+
+                        <td class="p-4">
+                            John Doe
+                        </td>
+
+                        <td class="p-4">
+                            john@gmail.com
+                        </td>
+
+                        <td class="p-4">
+                            Student
+                        </td>
+
+                        <td class="p-4">
+
+                            <span class="bg-green-200 px-3 py-1 rounded">
+
+                                Active
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <tr class="border-b">
+
+                        <td class="p-4">
+                            #002
+                        </td>
+
+                        <td class="p-4">
+                            Sarah
+                        </td>
+
+                        <td class="p-4">
+                            sarah@gmail.com
+                        </td>
+
+                        <td class="p-4">
+                            Instructor
+                        </td>
+
+                        <td class="p-4">
+
+                            <span class="bg-green-200 px-3 py-1 rounded">
+
+                                Active
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <tr>
+
+                        <td class="p-4">
+                            #003
+                        </td>
+
+                        <td class="p-4">
+                            Alex
+                        </td>
+
+                        <td class="p-4">
+                            alex@gmail.com
+                        </td>
+
+                        <td class="p-4">
+                            Student
+                        </td>
+
+                        <td class="p-4">
+
+                            <span class="bg-red-200 px-3 py-1 rounded">
+
+                                Inactive
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

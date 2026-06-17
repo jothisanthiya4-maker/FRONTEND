@@ -1,0 +1,16 @@
+<script>
+
+    //  Task 1
+
+    let arr=[1,2,3,5]
+    let missing = 0
+    for(let i=1;i<=arr.length-1;i++){
+        for(let j=1;j<=arr.length-1;j++){
+            if(i !=arr[j]){
+                missing=arr[j]
+            }
+        }
+    }
+    console.log('missing',missing);
+    
+</script>

@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent{
+    background-color: cornflowerblue;
+    height: 400px;
+    width:auto;
+    display: flex;
+    
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+    border: solid rgb(32, 87, 189) 2px;
+}
+.child{
+    background-color: rgb(32, 87, 189);
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: solid white 2px;
+}

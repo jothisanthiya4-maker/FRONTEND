@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav{
+    background-color:#0b132b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logodiv{
+    display: flex;
+    align-items: center;
+}
+button{
+    margin-right: 10px;
+    background-color: lightgreen;
+    border-radius: 5px;
+    padding: 3px;
+}
+.adiv a{
+   text-decoration: none;
+   color: beige;
+}
+.imgdiv img{
+    height: 450px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.img{
+    display: flex;
+    padding: 30px;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}

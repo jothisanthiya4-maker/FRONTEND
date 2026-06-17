@@ -1,0 +1,15 @@
+*{
+    background-color: hotpink;
+}
+#heading{
+    background-color:rgb(150, 35, 93) ;
+}
+.subhead{
+    background-color: rgb(165, 3, 165);
+}
+p{
+    background-color: rgb(255, 0, 255);
+}
+ol >li,ul >li{
+    background-color: rgb(103, 25, 103);
+}

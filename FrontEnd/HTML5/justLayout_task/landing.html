@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Task Page</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+      <link rel="shortcut icon" href="./assets/to-do-list.png" type="image/x-icon">
+      <style>
+         body{
+         margin:0;
+         font-family:Arial;
+         background:#f6f6f6;
+         }
+         nav{
+         display:flex;
+         justify-content:space-between;
+         align-items:center;
+         padding:20px 60px;
+         background:white;
+         box-shadow:0px 0px 10px lightgray;
+         }
+         .left{
+         display:flex;
+         align-items:center;
+         gap:40px;
+         }
+         .links a{
+         text-decoration:none;
+         color:black;
+         margin:12px;
+         }
+         .profile{
+         display:flex;
+         align-items:center;
+         gap:10px;
+         }
+         .profile img{
+         width:40px;
+         height:40px;
+         border-radius:50%;
+         }
+         .banner{
+         margin:30px;
+         background:white;
+         padding:70px;
+         border-radius:20px;
+         display: flex;
+         justify-content: center ;
+         align-items: center;
+
+
+         }
+         .banner img{
+            height: 500px;
+            width: 100%;
+         }
+        
+         .cardsTitle{
+         text-align:center;
+         margin-top:50px;
+         }
+         .cards{
+         display:grid;
+         grid-template-columns:
+         repeat(3,1fr);
+         gap:30px;
+         padding:40px 70px;
+         }
+         .card{
+         background:white;
+         padding:40px;
+         border-radius:15px;
+         text-align:center;
+         box-shadow:0px 0px 10px #ddd;
+         transition:.3s;
+         }
+         .card:hover{
+         transform:translateY(-10px);
+         }
+         .card button{
+         padding:10px 20px;
+         border:none;
+         background:#5b5bf6;
+         color:white;
+         border-radius:5px;
+         margin-top:15px;
+         cursor:pointer;
+         }
+         .card button:hover{
+         background:black;
+         }
+         footer{
+         margin-top:50px;
+         background:white;
+         padding:30px;
+         display:flex;
+         justify-content:space-between;
+         align-items:center;
+         padding-left:60px;
+         padding-right:60px;
+         }
+      </style>
+   </head>
+   <body>
+      <nav>
+         <div class="left">
+            <h2 class="text-3xl font-bold">
+               TaskHub
+            </h2>
+            <div class="links">
+               <a href="">HTML</a>
+               <a href="">CSS</a>
+               <a href="">Bootstrap</a>
+               <a href="">JavaScript</a>
+               <a href="">Projects</a>
+               <a href="">Team Task</a>
+            </div>
+         </div>
+         <div class="profile">
+            <p>
+               Jothi Santhiya
+            </p>
+            <img src="./assets/download (12).jpg">
+         </div>
+      </nav>
+      <section class="banner">
+       
+         <div>
+            <img src="./assets/PC motivational wallpaper for students_.jpg" >
+         </div>
+      </section>
+      <section>
+         <div class="cardsTitle">
+            <h1 class="text-5xl font-bold">
+               Browse Topics
+            </h1>
+            <p class="mt-4">
+               Select topics and complete tasks.
+            </p>
+         </div>
+         <div class="cards">
+            <div class="card">
+               <div class="text-6xl">
+                  💻
+               </div>
+               <h2 class="text-3xl mt-5">
+                  HTML
+               </h2>
+               <p class="mt-4">
+                  Learn web structure
+               </p>
+               <button>
+               View Tasks
+               </button>
+            </div>
+            <div class="card">
+               <div class="text-6xl">
+                  🎨
+               </div>
+               <h2 class="text-3xl mt-5">
+                  CSS
+               </h2>
+               <p class="mt-4">
+                  Make pages beautiful
+               </p>
+               <button>
+               View Tasks
+               </button>
+            </div>
+            <div class="card">
+               <div class="text-6xl">
+                  🅱️
+               </div>
+               <h2 class="text-3xl mt-5">
+                  Bootstrap
+               </h2>
+               <p class="mt-4">
+                  Responsive layouts
+               </p>
+               <button>
+               View Tasks
+               </button>
+            </div>
+            <div class="card">
+               <div class="text-6xl">
+                  📑
+               </div>
+               <h2 class="text-3xl mt-5">
+                  JavaScript
+               </h2>
+               <p class="mt-4">
+                  Dynamic websites
+               </p>
+               <button>
+               View Tasks
+               </button>
+            </div>
+            <div class="card">
+               <div class="text-6xl">
+                  📁
+               </div>
+               <h2 class="text-3xl mt-5">
+                  Projects
+               </h2>
+               <p class="mt-4">
+                  Build projects
+               </p>
+               <button>
+               View Tasks
+               </button>
+            </div>
+            <div class="card">
+               <div class="text-6xl">
+                  👥
+               </div>
+               <h2 class="text-3xl mt-5">
+                  Team Task
+               </h2>
+               <p class="mt-4">
+                  Collaborate together
+               </p>
+               <button>
+               View Tasks
+               </button>
+            </div>
+         </div>
+      </section>
+      <footer>
+         <h2 class="font-bold text-2xl">
+            TaskHub
+         </h2>
+         <p>
+            © 2026 TaskHub
+         </p>
+         <div>
+            <i class="fa-brands fa-github"></i>&nbsp;&nbsp; <i class="fa-brands fa-linkedin">&nbsp;&nbsp; </i> <i class="fa-brands fa-twitter"></i>
+         </div>
+      </footer>
+   </body>
+</html>

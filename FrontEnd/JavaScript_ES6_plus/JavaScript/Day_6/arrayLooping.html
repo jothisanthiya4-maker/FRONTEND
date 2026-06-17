@@ -1,0 +1,149 @@
+<script>
+
+    // let hero=["vijay","surya","ajith","sk","yogi"]
+    // let reversed=[]
+
+    // for(let i=hero.length-1;i>=0;i--){
+
+    //    reversed.push(hero[i])
+        
+        
+        
+    // }
+    // console.log(reversed);
+
+    // task 1
+
+    let hero=["vijay","surya","ajith","sk","yogi"]
+    for(let i=0;i<=hero.length-1;i++){
+        console.log(hero[i]);
+        
+    }
+
+    // task 2
+
+    let movie=[,1000,200,500,800,400,600,900]
+    let largest =movie[0]
+    for(let i=0;i<=movie.length-1;i++){
+        for(let j=1;j<=movie.length-1;j++){
+            if(movie[j]>movie[i]){
+                largest=movie[j]
+            }
+        }
+    }
+    console.log(largest);
+
+    // task 3
+
+    movie=[1000,200,500,800,400,600,900]
+    let smallest=movie[0]
+    for(let i=0;i<=movie.length-1;i++){
+        if(movie[i] < smallest){
+            smallest=movie[i]
+        }
+    }
+    console.log(smallest);
+    
+    // task 4
+
+    let sum=0
+    movie=[1000,200,500,800,400,600,900]
+    for(i=0;i<=movie.length-1;i++){
+        sum+=movie[i]
+    }
+    console.log(sum);
+
+    // task 5
+
+    sum=0
+    movie=[1000,200,500,800,400,600,900]
+    for(i=0;i<=movie.length-1;i++){
+        sum+=movie[i]
+    }
+    console.log('average of all is',sum/movie.length);
+
+    
+    // task 6
+
+    let heros=["Vijay","Ajith","Suriya","SK"]
+    let reversed=[]
+    let index=0
+    for(let i=heros.length-1;i>=0;i--){
+        reversed[index]=heros[i]
+        index++
+    }
+    console.log(reversed);
+
+    // task 7
+
+    let fruits=["Apple","Mango","Orange","Banana"]
+    let found=false
+    for(let i=0;i<=fruits.length-1;i++){
+        if(fruits[i]=="Mango"){
+            found=true
+            break
+        }
+        
+    }
+    if(found==true){
+        console.log('mango found');
+        
+    }
+    else{
+        console.log('mango not found');
+        
+    }
+
+    // task 8
+
+    fruits=["Apple","Mango","Orange","Banana"]
+    sum=0
+    for(i=0;i<=fruits.length-1;i++){
+        sum+=1
+    }
+    console.log(sum);
+
+    // task 9
+
+    let heroo=["Vijay","Ajith","Sivakarthikeyan","SK"]
+    let longest=heroo[0]
+    for(i=0;i<=heroo.length-1;i++){
+        if(heroo[i].length>longest.length){
+            longest=heroo[i]
+        }
+    }
+    console.log(longest);
+    
+
+
+    // task 10 
+
+    let movie2 = "LEVEL";
+    let reversed2=""
+    for(let i=movie2.length-1;i>=0;i--){
+        reversed2+=movie2[i]
+    }
+    if(movie2==reversed2){
+        console.log('the word is palindrome');
+    }
+    else{
+        console.log('the word is not palindrome');
+        
+    }
+
+    // TASK 11
+
+    let hero2 = "VIJAY";
+    let reversed3=""
+    for(let i=hero2.length-1;i>=0;i--){
+        reversed3+=hero2[i]
+    }
+    console.log(reversed3);
+
+    // task 12
+
+
+    
+
+    
+</script>

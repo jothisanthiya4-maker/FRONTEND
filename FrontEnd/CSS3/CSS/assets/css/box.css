@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.div{
+    width: 700px;
+    height: 400px;
+    background-color: #3498db;
+    margin: 50px auto;
+    padding: 30px;
+    border: #0c3958 solid 3px;
+}
+p{
+    padding: 50px;
+    background-color: #197ec1;
+
+}
+h1{
+    text-align: center;
+    background-color: #197ec1;
+}
