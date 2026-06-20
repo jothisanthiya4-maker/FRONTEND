@@ -1,4 +1,7 @@
-<script>
+<html>
+
+<center><h1>Array Methods</h1></center>
+    <script>
 
     let arr =[1,2,3,4,5,[6,7,8],9,10]
     let find= arr.includes(7)
@@ -7,5 +10,106 @@
     let slice= arr.slice(2,5)
     console.log(slice);
     
-     
+
+    // task 1
+
+    let arr2=["GOAT","Leo","Master"]
+    arr2.push("ghilli")
+    console.log(arr2);
+    arr2.pop()
+    console.log(arr2);
+
+
+    // task 2
+
+    let arr3=["Ajith","Suriya","SK"]
+    arr3.unshift("vijay")
+    console.log(arr3);
+    arr3.shift()
+    console.log(arr3);
+
+    // task 3
+
+    let arr4=["Apple","Mango","Orange"]
+    arr4.push("banana","grapes")
+    console.log(arr4);
+    arr4.pop()
+    console.log(arr4);
+    arr4.unshift("pineapple")
+    console.log(arr4)
+    arr4.shift()
+    console.log(arr4)
+    
+    // task 4
+
+    let obj={
+   name:"Sudhan",
+   course:"MERN",
+   city:"Chennai"
+}
+console.log(obj.name,obj.course,obj.city);
+console.log(obj["name"],obj["course"],obj["city"]);
+
+    //  task 5
+
+    let arrobj=[
+   {
+      brand:"Samsung",
+      price:20000
+   },
+
+   {
+      brand:"iPhone",
+      price:80000
+   },
+
+   {
+      brand:"OnePlus",
+      price:35000
+   }
+]
+    for(let i=0;i<arrobj.length;i++){
+    console.log(arrobj[i].brand, "-",arrobj[i].price)
+    
+}
+
+// task 6
+
+    let movies=[
+   {
+      movie:"GOAT",
+      collection:800
+   },
+
+   {
+      movie:"Leo",
+      collection:600
+   },
+
+   {
+      movie:"Master",
+      collection:900
+   }
+]
+let collection=0
+let highestcoll=movies[0].collection
+highcollmovie=movies[0].movie
+for(let i=0;i<movies.length;i++){
+    collection+=movies[i].collection
+}
+    console.log(collection);
+
+    for(let i=0;i<movies.length;i++){
+        if(movies[i].collection>highestcoll){
+            highestcoll=movies[i].collection
+            highcollmovie=movies[i].movie
+        }
+    }
+    console.log("highest collection is ", highestcoll);
+    console.log("movie with high collection is",highcollmovie);
+    
+    
+        
+         
 </script>
+</html>

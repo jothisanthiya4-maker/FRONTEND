@@ -1,0 +1,86 @@
+<script>
+
+    // practice
+
+    // printing all values of obj
+
+    let obj={name:"jothi",age:21,course:"FS",city:"tvl"}
+    console.log(Object.values(obj));
+
+    // mobile  object 
+
+    let obj2={brand:"vivo",model:"y35",price:18000,color:"blue"}
+    console.log(obj2.brand,obj2.price);
+
+    // array fruit access
+
+    let arr=["apple","mango","grapes","jackfruit","iceapple"]
+    console.log(arr[0],arr[2],arr.at(-1));
+    
+    // array loop
+
+    let obj3={color1:"blue",color2:"yellow",color3:"red",color4:"green",color5:"black",color6:"pink"}
+    for(let i in obj3){
+        console.log(obj3[i]);
+    }
+
+    // function obj4(obj5){
+    //     console.log(obj5);
+        
+    // }
+
+    // obj4({color1:"blue",color2:"yellow",color3:"red",color4:"green",color5:"black",color6:"pink"})
+
+
+    let arr2=[{id:24,name:"dilaka",mark:98},{id:26,name:"divya",mark:99},{id:27,name:"jothi",mark:90},{id:28,name:"faitha",mark:99}]
+    for(let i of arr2){
+        console.log("student name is ", i.name);
+        console.log("mark of ",i.name ,"is ", i.mark);
+        
+    }
+    console.log("student count is ", arr2.length);
+    
+    
+    // school array of object
+
+    let school=[{schlname:"kv vnm",city:"chennai",students:900},{schlname:"henry",city:"sathankulam",students:500},{schlname:"vsr",city:"tisayanvilai",students:1000},{schlname:"govt schl",city:"parappadi",students:300},{schlname:"high schl",city:"ilangulam",students:800}]
+    for(let i of school){
+        console.log(i.schlname);
+        
+    }
+    for(let i of school){
+        if(i.city==="chennai"){
+            console.log(i);
+            
+        }
+    }
+
+    // college array of object
+
+    let colleges=[{name:"vv college",location:"tisayanvilai",dept:[1,2,3,4,5,6]},{name:"rohini",location:"nagercoil",dept:[5,6,7,8]},{name:"kalasalingam",location:"srivilliputhur",dept:[9,10,11,12]},{name:"mepco",location:"sivakasi",dept:[14,15,16,17]},{name:"srm",location:"chennai",dept:[18,19,20,21]}]
+    let ar=[]
+    let dept=[]
+    let index=0
+    for(let i of colleges){
+        ar[index]=i.name
+        dept.push(i.dept)
+        index++
+        
+        
+    }
+    console.log(ar);
+    console.log(dept);
+
+    for(let i of colleges){
+        if(i.dept.length>5){
+            console.log(i.dept);
+            
+        }
+    }
+    
+
+    
+    
+
+
+</script>

@@ -1,0 +1,17 @@
+<script>
+
+const outer=(name,amt)=>{
+    let balance=20000
+    const inner=()=>{
+        balance+=amt
+        console.log(balance);
+        
+    }
+    return inner
+    
+
+}
+
+const update=outer("jothi",1000)
+update(2000)
+</script>
