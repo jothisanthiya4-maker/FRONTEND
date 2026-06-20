@@ -1,0 +1,147 @@
+<html>
+<center>
+    <h1>Callback and Closure</h1>
+</center>
+
+<script>
+    // task 1
+
+    let hero = "vijay"
+    const length = () => {
+        console.log("length of name vijay", hero.length);
+
+    }
+    length()
+    if (hero == "vijay") {
+        console.log("hero name is :", hero);
+
+    }
+    for (let i = 0; i < hero.length; i++) {
+        console.log(hero[i]);
+
+    }
+
+    // task 2
+
+    //         const movie = ()=>{
+    //    let collection = 800;
+    // }
+    // console.log(collection);
+
+    // task 3
+
+    if (true) {
+
+        var actor1 = "Ajith";
+
+        let actor2 = "Vijay";
+
+    }
+    console.log(actor1);
+    // console.log(actor2);
+
+    // task 4
+
+    const showMovie = function () {
+        console.log("GOAT movie released");
+
+    }
+    showMovie()
+
+    // task 5
+
+    const sum = (a, b) => {
+        let c = a + b
+        console.log("sum is :", c);
+
+    }
+
+    sum(5, 10)
+
+
+    // task 6
+
+    const booking = (call) => {
+        console.log("hello");
+
+        call()
+
+    }
+    booking(() => {
+        console.log("booking confirmed");
+
+    })
+
+    // task 7
+
+    setTimeout(() => {
+        console.log("movie started");
+
+    }, 2000)
+
+    // task 8
+
+    const order = (status) => {
+        console.log("order received");
+        status()
+    }
+    order(() => {
+        console.log("order delivered");
+
+    })
+
+    // task 9
+
+    const counter = () => {
+        let count = 0
+        const increment = () => {
+            console.log(count);
+            count++
+
+        }
+        return increment
+    }
+    let total = counter()
+    total()
+    total()
+
+    // task 10
+
+    const banking = () => {
+        let balance = 5000
+
+        let obj = {
+            deposit: (depoamt) => {
+                balance += depoamt
+                console.log("amount added successfully and current balance is :",balance);
+                
+            },
+
+            withdraw: (withamt) => {
+                if (balance >= withamt) {
+                    balance -= withamt
+                    console.log("amount debited and current balance is :",balance);
+                    
+                }
+                else{
+                    console.log("amount insufficient");   
+                }
+            },
+            checkbalance:()=>{
+                console.log("current balance is:", balance);
+                
+            }
+
+        }
+        return obj
+
+    }
+    let bankingSystem = banking()
+    bankingSystem.checkbalance()
+    bankingSystem.deposit(300)
+    bankingSystem.checkbalance()
+    bankingSystem.withdraw(5301)
+
+</script>
+
+</html>
