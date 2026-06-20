@@ -1,0 +1,130 @@
+<html>
+
+<center><h1>Array and Object Looping</h1></center>
+
+<script>
+
+    // task 1
+    
+    let tech=["HTML","CSS","JavaScript"]
+    tech.push("reach")
+    tech.push("node.js")
+    console.log(tech);
+    
+
+    // task 2
+
+    tech=["HTML","CSS","JavaScript"]
+    console.log(tech.pop());
+    console.log(tech);
+    
+
+    // task 3
+
+    let fruits=["Apple","Mango","Orange","Banana"]
+    console.log(fruits.shift());
+    console.log(fruits);
+
+    // task 4
+
+    let actors=["Ajith","Suriya","SK"]
+    actors.unshift("vijay","dhanush")
+    console.log(actors);
+    
+    
+    // task 5
+
+    tech=["HTML","CSS","Bootstrap","React"]
+    tech.splice(2,1,"javascript")
+    console.log(tech);
+    
+    // task 6
+
+    tech=["HTML","CSS","JavaScript","React","Node"]
+    let slice=tech.slice(2,4)
+    console.log(slice);
+    
+
+    // task 7
+
+    let student = {
+
+   name:"Sudhan",
+
+   course:"MERN",
+
+   city:"Chennai",
+
+   age:25
+
+};
+
+for(let i in student){
+    console.log(i , ":" ,student[i]);
+    
+    
+}
+
+// task 8
+
+let actorMovie=[
+   {
+      name:"Vijay",
+      movie:"GOAT"
+   },
+
+   {
+      name:"Ajith",
+      movie:"Vidaamuyarchi"
+   },
+
+   {
+      name:"Suriya",
+      movie:"Kanguva"
+   }
+]
+
+for(let i=0;i<actorMovie.length;i++){
+    console.log(actorMovie[i].name,"-",actorMovie[i].movie);
+    
+    
+}
+
+// task 9
+
+actors=["Vijay","Ajith","Suriya","SK"]
+console.log(actors.join("|"));
+
+
+// task 10
+
+tech=["HTML","CSS","JavaScript","React"]
+
+check=tech.includes("React")
+if(check){
+    console.log("course found");
+    
+}
+else{
+    console.log("course not found");
+    
+}
+
+// final task 
+
+let numbers=[1,2,3,4,5,6]
+let halfNumbers=[7,8,9,0]
+console.log(numbers.concat(halfNumbers));
+console.log("indexof 2:", numbers.indexOf(2));
+console.log(numbers.lastIndexOf(5));
+console.log(numbers.reverse());
+console.log(halfNumbers.sort());
+console.log(halfNumbers.toString());
+console.log(halfNumbers.length);
+
+
+
+
+ 
+</script>
+</html>
