@@ -1,0 +1,217 @@
+<html>
+    <center>
+        <h1>Higher Order Array Methods</h1>
+    </center>
+
+    <script>
+
+        // task 1
+
+        let heros=["vijay","ajith","surya"]
+        const upperCase=heros.map((e)=>e.toUpperCase())
+        console.log(upperCase);
+
+        // task 2
+
+        const collections = [
+
+   100,
+
+   200,
+
+   300,
+
+   400
+];
+
+    collections.map((num)=>console.log(num*10))
+
+    // task 3
+
+    const movies = [
+
+   "GOAT",
+
+   "Leo",
+
+   "Master"
+];
+
+movies.forEach((i)=>console.log("Movie:",i))
+
+        // task 4
+
+        const collection = [
+
+   100,
+
+   500,
+
+   800,
+
+   200,
+
+   900
+];
+
+       const data = collection.filter((e)=>{
+        return e>500
+       })
+       console.log(data);
+       
+        
+
+    //task 6
+
+    const heroes = [
+
+   "Vijay",
+
+   "Ajith",
+
+   "SK",
+
+   "Suriya"
+];
+
+       const lengthHeros= heroes.filter((e)=>{
+        return e.length >4
+       })
+       console.log(lengthHeros);
+
+    //    task 7
+
+    const hero = [
+
+   "Vijay",
+
+   "Ajith",
+
+   "Suriya"
+];
+
+       const result =hero.find((e)=>{
+        return e==="Ajith"
+       })
+       console.log(result);
+       
+    //    task 8
+
+    const heroo = [
+
+   "Vijay",
+
+   "Ajith",
+
+   "Suriya"
+];
+
+       const index = heroo.indexOf("Suriya")
+       console.log(index);
+
+// task 9
+
+const marks = [
+
+   35,
+
+   80,
+
+   20,
+
+   90
+];
+
+const fail=marks.some((e)=>{
+    return e<35
+})
+console.log(fail);
+
+
+// task 15
+
+const collect = [
+
+   100,
+
+   200,
+
+   300,
+
+   400
+];
+
+const total=collect.reduce((e,i)=>{
+    return e+=i
+},0)
+console.log("total collection", total);
+
+
+// task 18
+
+const students = [
+
+   {
+      id:1,
+      name:"Sudhan"
+   },
+
+   {
+      id:2,
+      name:"Rahul"
+   }
+];
+
+const name=students.map((e)=>console.log(e.name))
+
+// task 19
+
+const student = [
+
+   {
+      id:1,
+      age:20
+   },
+
+   {
+      id:2,
+      age:30
+   },
+
+   {
+      id:3,
+      age:18
+   }
+];
+
+const age=student.filter((e)=>{
+    if(e.age>20){
+        console.log(e.id);
+        
+    }
+})
+       
+
+// task 21
+
+let num=[100,500,800,200]
+
+const largest=num.reduce((acc,i)=>{
+    if(i>acc){
+        acc=i
+
+    }
+    return acc
+},num[0])
+console.log("largest number is :", largest);
+
+
+// task 23
+
+let arr=[10,15,20,25,30]
+
+const even=arr.filter((e)=>e%2==0)
+console.log("even numbers are ",even);
+
+    </script>
+</html>
