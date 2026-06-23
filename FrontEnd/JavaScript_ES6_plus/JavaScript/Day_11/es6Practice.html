@@ -1,0 +1,106 @@
+<html>
+
+<center>
+    <h1>es6 Features practice</h1>
+</center>
+
+<script>
+
+    // task 5
+
+
+    const hero=(name)=>{
+        console.log("hero name is", name);
+        
+    }
+    hero("vijay")
+
+    // task 6
+
+     const add=(a,b)=>{
+        console.log("addition is ", a+b);
+        
+    }
+    add(10,20)
+
+    // task 7
+
+    let heroo="vijay"
+    console.log(`my favorite  hero is ${heroo}`);
+    
+    // task 8
+
+    let name="jothi"
+    let course="fullstack"
+    let city="chennai"
+
+    console.log(`my name is ${name} and the course i study is ${course} and i live in ${city}`);
+    
+    // task 9
+
+    let heros=["Vijay","Ajith","Suriya"]
+    let [...x]=heros
+    console.log(x);
+
+    //  task 10
+
+    const obj={
+   namee:"Sudhan",
+   coursee:"MERN",
+   city:"Chennai"
+}
+const {...coursee}=obj
+console.log(coursee);
+
+    let tech=["HTML","CSS","JavaScript"]
+    let copy=[...tech]
+    copy.push("react")
+    console.log(copy);
+
+    // task 11
+
+    const movie=(...collection)=>{
+       let total= collection.reduce((acc,e)=>{
+       return acc+e
+       },0)
+       console.log(total);
+        
+    }
+    movie( 500,
+   800,
+   300,
+   700)
+    
+
+    // task 11
+
+    const employee = {
+
+   name:"Rahul",
+
+   department:"IT",
+
+   salary:30000
+
+};
+let copyobj={...employee}
+copyobj.experience=2
+const{...finalObj}=copyobj
+console.log(finalObj);
+
+// task 12
+
+const enrollStudent =(studentName,...courses)=>{
+    console.log(`the student name is : ${studentName} and the courses are : ${courses}`);
+    
+}
+enrollStudent( "Sudhan",
+
+   "React",
+
+   "Node",
+
+   "MongoDB")
+
+</script>
+</html>
