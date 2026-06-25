@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DOM Events</title>
 </head>
 <body>
-    <center>
+    <center style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 20px;">
 
         <!-- task 1 -->
 
@@ -15,6 +15,20 @@
         <input type="text" id="inp1">
 
         <button id="btn1" onclick="show()">click to display</button>
+
+        <!-- task 2 -->
+
+        <p id="para" style="display: flex;">this is my paragraph</p>
+        <button id="btn2" onclick="hide()">click to hide</button>
+
+        <!-- task 3 -->
+
+        <p id="para2" style="display: none;">this is my paragraph</p>
+        <button id="btn3" onclick="showPara()">click to show</button>
+
+        <!-- task 5 -->
+
+        <input type="text" id="input" onchange="alertMsg()">
 
     </center>
 
@@ -31,6 +45,49 @@
 
     }
     }
+
+    // task 2
+
+    const hide=()=>{
+
+        const display=document.getElementById("para")
+        if(display.style.display=="flex"){
+            display.style.display="none"
+        }
+        else{
+           display.style.display="flex" 
+        }
+    }
+
+
+    // task 3
+
+     const showPara =()=>{
+
+        const display=document.getElementById("para2")
+        const buttonText=document.getElementById("btn3")
+        if(display.style.display=="flex"){
+            display.style.display="none"
+        }
+        else{
+           display.style.display="flex" 
+           buttonText.innerText="click to hide"
+        }
+    }
+
+    // task 5
+
+    const alertMsg=()=>{
+        const data=document.getElementById("input").value
+        if(data==="admin"){
+            alert('login success')
+        }
+        else{
+            alert('invalid credential')
+        }
+    }
+
+
 
     </script>
 </body>
