@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <center style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h1>DOM Intro</h1>
+    
+
+    <!--task 1 -->
+
+    <h1 id="title">Welcome</h1>
+
+    <!-- task 2 -->
+
+    <p id="para">React</p>
+
+    <!-- task 3 -->
+
+    <input id="username" type="text" style="margin-left: 550px; margin-right: 550px;"/>
+
+    <!-- task 4 -->
+
+    <img id="image" src="../assets/old.jpg" alt="" height="500px" width="500px">
+
+    <!-- task 5 -->
+
+    <a href="https://in.pinterest.com/" id="site">visit</a>
+
+    <!-- Bonus -->
+
+    <h1 id="titlee">Hello</h1>
+
+    <p id="content">Learning DOM</p>
+
+    <input id="name"/>
+
+    <script>
+
+        // task 1
+
+        document.getElementById("title").innerText="Welcome to JavaScript DOM"
+
+        // task 2
+
+        document.querySelector("#para").innerText="MERN Stack"
+
+        // task 3
+
+        document.getElementById("username").value="sudhan"
+        
+        
+        // task 4
+
+        document.getElementById("image").src="../assets/new.jpg"
+
+        // task 5
+
+        document.getElementById("site").href="https://google.com"
+
+        // bonus
+
+        document.getElementById("titlee").innerText="Hii im Jo"
+        document.getElementById("content").innerText="Im currently Learning DOM"
+        document.getElementById("name").value="Wanna know about me"
+
+    </script>
+    </center>
+</body>
+</html>

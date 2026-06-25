@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggle</title>
+
+    
+</head>
+<body>
+    <div id="main" style="display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;">
+        
+        <div id="box" style="height: 200px;
+            width: 200px;
+            background-color: blueviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;">
+            box
+        </div>
+        <div id="btn">
+            <button id="button" onclick="toggle()">
+                click me to hide 
+            </button>
+        </div>
+    </div>
+
+    <!-- task -->
+     
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
+        
+        <div id="box2" style="height: 200px;
+            width: 200px;
+            background-color: rgb(50, 219, 151);
+            display: flex;
+            justify-content: center;
+            align-items: center; margin-top: 30px;">
+            box
+        </div>
+        <div id="i" onchange="hiding()">
+            <input id="inp" type="text" placeholder="type here">
+        </div>
+    </div>
+
+    <!-- task 2 -->
+
+    <div style="display: flex; justify-content: center; align-items: center; margin-top: 30px;">
+
+        <form action="" id="form">
+            <input id="inp2" type="text" placeholder="enter here"  >
+            <button id="btn" onclick="arrayAdd(event)">click</button>
+        </form>
+    </div>
+
+
+    <script>
+
+       toggle=()=>{
+            const click = document.getElementById("box")
+            if(click.style.display=="flex"){
+                click.style.display="none"
+            }
+            else{
+                click.style.display="flex"
+            }
+        }
+
+        // task
+
+        hiding=()=>{
+            const check=document.getElementById("inp").value
+            const boxStyle=document.getElementById("box2")
+            if(check=="hide"){
+                boxStyle.style.display="none"
+
+            }
+            else if(check=="show"){
+                boxStyle.style.display="flex"
+            }
+            
+            
+
+        }
+
+        // task 2
+
+        let arr=[]
+        
+        arrayAdd=(event)=>{
+            event.preventDefault()
+            const result=document.getElementById("inp2").value
+            
+            arr.push(result)
+            console.log(arr);
+            document.getElementById("form").reset()
+
+            
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+
+        <!-- task 1 -->
+
+        <h2 id="h2"></h2>
+
+        <input type="text" id="inp1">
+
+        <button id="btn1" onclick="show()">click to display</button>
+
+    </center>
+
+    <script>
+
+
+    // task 1
+
+    const show=()=>{
+    let inputHero= document.getElementById("inp1").value
+    if(inputHero=="vijay"){
+
+        document.getElementById("h2").innerHTML="<h2>hero name is vijay</h2>"
+
+    }
+    }
+
+    </script>
+</body>
+</html>
