@@ -12,7 +12,7 @@
 
         <h2 id="h2"></h2>
 
-        <input type="text" id="inp1">
+        <input type="text" id="inp1" placeholder="enter hero name">
 
         <button id="btn1" onclick="show()">click to display</button>
 
@@ -28,7 +28,34 @@
 
         <!-- task 5 -->
 
-        <input type="text" id="input" onchange="alertMsg()">
+        <input type="text" id="input" onchange="alertMsg()" placeholder="enter user name">
+
+        <!-- task 6 -->
+
+        <input type="password" name="" id="input2" placeholder="enter password" onchange="validate()">
+
+        <!-- task 7 -->
+
+        <input type="text" id="firstName" placeholder="enter first name">
+        <input type="text" id="secondName" placeholder="enter second name">
+        <div id="name"></div>
+        <button id="btn4" onclick="join()">click me</button>
+
+        <!-- task 8 -->
+
+        <h1 id="myName">HII I'm Jo</h1>
+        <button id="myButton" onclick="myRole()">click to see my role</button>
+
+        <!-- task 10 -->
+
+        <input type="text" id="formInput" placeholder="please enter text">
+        <button id="formButton" onclick="validateForm()">click to check</button>
+
+        <!-- task 11 -->
+
+        <h1 id="showValue"></h1>
+        <button id="counterButton" onclick="increase()">click to add</button>
+
 
     </center>
 
@@ -87,7 +114,53 @@
         }
     }
 
+    // task 6
 
+    const validate=()=>{
+        const pass=document.getElementById("input2").value
+        if(pass.length >8 ){
+            alert('Strong password')
+        }
+        else{
+            alert('Weak password')
+        }
+    }
+
+    // task 7
+
+    const join=()=>{
+        const fname=document.getElementById("firstName").value
+        const sname=document.getElementById("secondName").value
+        document.getElementById("name").innerHTML=`<h2> ${fname}   ${sname}</h2>`
+    }
+
+    // task 8
+
+    const myRole=()=>{
+        
+        document.getElementById("myName").innerText ="my role is web developer"
+        document.getElementById("myName").style.backgroundColor="lightgreen"
+    }
+
+
+    // task 10
+
+    const validateForm=()=>{
+        const formValue=document.getElementById("formInput").value
+        if(formValue==""){
+            alert('please enter value')
+        }
+        else{
+            alert('form submitted')
+        }
+    }
+
+    // task 11
+    let counter=0
+    const increase=()=>{
+        counter++
+        document.getElementById("showValue").innerText= `the value is :  ${counter}`
+    }
 
     </script>
 </body>
