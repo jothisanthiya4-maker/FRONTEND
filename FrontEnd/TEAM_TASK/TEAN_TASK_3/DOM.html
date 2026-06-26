@@ -1,225 +1,343 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Tasks</title>
-
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
-<body class="bg-slate-100 py-10">
-
-<div class="max-w-5xl mx-auto px-5 space-y-8">
+<body>
 
     <!-- TASK 1 -->
-    <div class="bg-white p-6 rounded-xl shadow-lg space-y-4">
-        <h1 class="text-3xl font-bold text-blue-600">TASK 1</h1>
+    <h1>TASK 1</h1>
+    <h2>Enter Student Mark</h2>
+    <input type="number" id="studentMark">
+    <button onclick="check()">Check</button>
+    <p id="show"></p>
 
-        <h2 class="font-semibold">Enter Student Mark</h2>
-        <input type="number" id="studentMark"
-            class="w-full border p-3 rounded-lg">
-
-        <button onclick="check()"
-            class="bg-blue-500 text-white px-5 py-2 rounded-lg">
-            Check
-        </button>
-
-        <p id="show" class="font-semibold text-green-600"></p>
-    </div>
+    <hr>
 
     <!-- TASK 2 -->
-    <div class="bg-white p-6 rounded-xl shadow-lg space-y-4">
-        <h1 class="text-3xl font-bold text-blue-600">TASK 2</h1>
+    <h1>TASK 2</h1>
+    <h2>Odd or Even</h2>
+    <input type="number" id="oddEven">
+    <button onclick="oddOrEven()">Check</button>
+    <p id="ans"></p>
 
-        <h2 class="font-semibold">Odd or Even</h2>
-
-        <input type="number" id="oddEven"
-            class="w-full border p-3 rounded-lg">
-
-        <button onclick="oddOrEven()"
-            class="bg-blue-500 text-white px-5 py-2 rounded-lg">
-            Check
-        </button>
-
-        <p id="ans" class="font-semibold text-green-600"></p>
-    </div>
+    <hr>
 
     <!-- TASK 4 -->
-    <div class="bg-white p-6 rounded-xl shadow-lg space-y-4">
-        <h1 class="text-3xl font-bold text-blue-600">TASK 4</h1>
+    <h1>TASK 4</h1>
+    <h2>Highest Collection</h2>
+    <p id="highestResult"></p>
 
-        <h2 class="font-semibold">Highest Collection</h2>
-
-        <p id="highestResult"
-            class="text-2xl font-bold text-green-600"></p>
-    </div>
+    <hr>
 
     <!-- TASK 6 -->
-    <div class="bg-white p-6 rounded-xl shadow-lg space-y-4">
-        <h1 class="text-3xl font-bold text-blue-600">TASK 6</h1>
+    <h1>TASK 6</h1>
+    <h2>Welcome App</h2>
+    <input type="text" id="welcomeName" placeholder="Enter your name">
+    <button onclick="showWelcome()">Show Welcome</button>
+    <h2 id="welcomeMessage"></h2>
 
-        <input type="text"
-            id="welcomeName"
-            placeholder="Enter Name"
-            class="w-full border p-3 rounded-lg">
-
-        <button onclick="showWelcome()"
-            class="bg-blue-500 text-white px-5 py-2 rounded-lg">
-            Show Welcome
-        </button>
-
-        <h2 id="welcomeMessage"
-            class="font-semibold text-green-600"></h2>
-    </div>
+    <hr>
 
     <!-- TASK 7 -->
-    <div class="bg-white p-6 rounded-xl shadow-lg space-y-4">
-        <h1 class="text-3xl font-bold text-blue-600">TASK 7</h1>
+    <h1>TASK 7</h1>
 
-        <input type="text"
-            id="loginUsername"
-            placeholder="Enter Username"
-            class="w-full border p-3 rounded-lg">
+    <input
+        type="text"
+        id="loginUsername"
+        placeholder="Enter Username"
+    >
 
-        <input type="password"
-            id="password"
-            placeholder="Enter Password"
-            onkeyup="checkPassword()"
-            class="w-full border p-3 rounded-lg">
+    <br><br>
 
-        <p id="passwordResult"></p>
+    <input
+        type="password"
+        id="password"
+        placeholder="Enter Password"
+        onkeyup="checkPassword()"
+    >
 
-        <button onclick="login()"
-            class="bg-blue-500 text-white px-5 py-2 rounded-lg">
-            Login
-        </button>
+    <p id="passwordResult"></p>
 
-        <h2 id="loginResult"
-            class="font-semibold text-green-600"></h2>
-    </div>
+    <button onclick="login()">Login</button>
+
+    <h2 id="loginResult"></h2>
+
+    <hr>
 
     <!-- TASK 8 -->
-    <div class="bg-white p-6 rounded-xl shadow-lg space-y-4">
-        <h1 class="text-3xl font-bold text-blue-600">TASK 8</h1>
+    <h1>TASK 8</h1>
 
-        <p class="hide flex">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
+    <p class="hide" style="display:flex;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
 
-        <div class="flex gap-3">
-            <button onclick="hide()"
-                class="bg-red-500 text-white px-5 py-2 rounded-lg">
-                Hide
-            </button>
+    <button onclick="hideText()">Hide</button>
+    <button onclick="showText()">Show</button>
 
-            <button onclick="show()"
-                class="bg-green-500 text-white px-5 py-2 rounded-lg">
-                Show
-            </button>
-        </div>
-    </div>
+    <hr>
 
     <!-- TASK 9 -->
-    <div class="bg-white p-6 rounded-xl shadow-lg space-y-4">
-        <h1 class="text-3xl font-bold text-blue-600">TASK 9</h1>
+    <h1>TASK 9</h1>
 
-        <h1 id="task9Headind"
-            class="text-2xl font-bold p-3 rounded-lg">
-            This is Task 9
-        </h1>
+    <h1 id="task9Headind">This is Task 9</h1>
 
-        <button onclick="changeColour()"
-            class="bg-blue-500 text-white px-5 py-2 rounded-lg">
-            Change Colour
-        </button>
-    </div>
+    <button onclick="changeColour()">
+        Click me to change colors
+    </button>
+
+    <hr>
 
     <!-- TASK 10 -->
-    <div class="bg-white p-6 rounded-xl shadow-lg space-y-4">
-        <h1 class="text-3xl font-bold text-blue-600">TASK 10</h1>
+    <h1>TASK 10</h1>
 
-        <input type="text"
-            id="name"
-            placeholder="Name"
-            class="w-full border p-3 rounded-lg">
+    <input type="text" id="name" placeholder="Enter Name">
+    <input type="email" id="email" placeholder="Enter Email">
+    <input type="number" id="age" placeholder="Enter Age">
 
-        <input type="email"
-            id="email"
-            placeholder="Email"
-            class="w-full border p-3 rounded-lg">
+    <button onclick="register()">Register</button>
 
-        <input type="number"
-            id="age"
-            placeholder="Age"
-            class="w-full border p-3 rounded-lg">
+    <div id="card"></div>
 
-        <button onclick="register()"
-            class="bg-blue-500 text-white px-5 py-2 rounded-lg">
+    <hr>
+
+    <!-- BONUS TASK -->
+    <h1>BONUS TASK</h1>
+
+    <form id="form">
+
+        <h2>Register</h2>
+
+        <input
+            type="text"
+            id="regName"
+            placeholder="Enter Name"
+        >
+
+        <input
+            type="password"
+            id="regPass"
+            placeholder="Enter Password"
+        >
+
+        <button
+            type="button"
+            onclick="registerUser(event)"
+        >
             Register
         </button>
 
-        <div id="card"></div>
-    </div>
+        <h2>Login</h2>
 
-    <!-- BONUS TASK -->
-    <div class="bg-white p-6 rounded-xl shadow-lg space-y-4">
-        <h1 class="text-3xl font-bold text-blue-600">
-            BONUS TASK
-        </h1>
+        <input
+            type="text"
+            id="loginName"
+            placeholder="Enter Name"
+        >
 
-        <form id="form" class="space-y-4">
+        <input
+            type="password"
+            id="loginPass"
+            placeholder="Enter Password"
+        >
 
-            <h2 class="text-xl font-semibold">Register</h2>
+        <button
+            type="button"
+            onclick="loginUser(event)"
+        >
+            Login
+        </button>
 
-            <input type="text"
-                id="regName"
-                placeholder="Enter Name"
-                class="w-full border p-3 rounded-lg">
+        <button
+            type="button"
+            onclick="logoutUser(event)"
+        >
+            Logout
+        </button>
 
-            <input type="password"
-                id="regPass"
-                placeholder="Enter Password"
-                class="w-full border p-3 rounded-lg">
+        <h2 id="message"></h2>
 
-            <button onclick="registerUser(event)"
-                class="bg-green-500 text-white px-5 py-2 rounded-lg">
-                Register
-            </button>
+    </form>
 
-            <h2 class="text-xl font-semibold">Login</h2>
+    <script>
 
-            <input type="text"
-                id="loginName"
-                placeholder="Enter Name"
-                class="w-full border p-3 rounded-lg">
+        // TASK 1
+        const check = () => {
+            const mark = document.getElementById("studentMark").value;
+            const grade = document.getElementById("show");
 
-            <input type="password"
-                id="loginPass"
-                placeholder="Enter Password"
-                class="w-full border p-3 rounded-lg">
+            if (mark >= 90 && mark <= 100) {
+                grade.innerText = "Student Grade: A";
+            }
+            else if (mark >= 80) {
+                grade.innerText = "Student Grade: B";
+            }
+            else if (mark >= 70) {
+                grade.innerText = "Student Grade: C";
+            }
+            else if (mark >= 60) {
+                grade.innerText = "Student Grade: D";
+            }
+            else if (mark >= 0) {
+                grade.innerText = "Student Grade: Fail";
+            }
+            else {
+                grade.innerText = "Invalid Mark";
+            }
+        }
 
-            <div class="flex gap-3">
-                <button onclick="loginUser(event)"
-                    class="bg-blue-500 text-white px-5 py-2 rounded-lg">
-                    Login
-                </button>
+        // TASK 2
+        const oddOrEven = () => {
+            const num = document.getElementById("oddEven").value;
+            const ans = document.getElementById("ans");
 
-                <button onclick="logoutUser(event)"
-                    class="bg-red-500 text-white px-5 py-2 rounded-lg">
-                    Logout
-                </button>
-            </div>
+            if (num % 2 === 0) {
+                ans.innerText = "Number is Even";
+            } else {
+                ans.innerText = "Number is Odd";
+            }
+        }
 
-            <h2 id="message"
-                class="font-semibold text-green-600"></h2>
+        // TASK 4
+        const highNum = [100, 500, 800, 200];
 
-        </form>
-    </div>
+        const highest = highNum.reduce((acc, cur) => {
+            return cur > acc ? cur : acc;
+        });
 
-</div>
+        document.getElementById("highestResult").innerText = highest;
+
+        // TASK 6
+        const showWelcome = () => {
+            const userName =
+                document.getElementById("welcomeName").value;
+
+            document.getElementById("welcomeMessage").innerText =
+                `Welcome ${userName}`;
+        }
+
+        // TASK 7
+        const checkPassword = () => {
+            const password =
+                document.getElementById("password").value;
+
+            if (password.length >= 8) {
+                document.getElementById("passwordResult").innerText =
+                    "Strong Password";
+            } else {
+                document.getElementById("passwordResult").innerText =
+                    "Weak Password";
+            }
+        }
+
+        const login = () => {
+            const username =
+                document.getElementById("loginUsername").value;
+
+            const password =
+                document.getElementById("password").value;
+
+            if (username === "admin" && password === "12345") {
+                document.getElementById("loginResult").innerText =
+                    "Login Success";
+            } else {
+                document.getElementById("loginResult").innerText =
+                    "Invalid Login";
+            }
+        }
+
+        // TASK 8
+        const hideText = () => {
+            document.querySelector(".hide").style.display = "none";
+        }
+
+        const showText = () => {
+            document.querySelector(".hide").style.display = "flex";
+        }
+
+        // TASK 9
+        const changeColour = () => {
+            document.getElementById("task9Headind")
+                .style.backgroundColor = "lightblue";
+
+            document.getElementById("task9Headind")
+                .style.color = "white";
+        }
+
+        // TASK 10
+        const register = () => {
+            const name =
+                document.getElementById("name").value;
+
+            const email =
+                document.getElementById("email").value;
+
+            const age =
+                document.getElementById("age").value;
+
+            document.getElementById("card").innerHTML =
+                "<h2>User Details</h2>" +
+                "<p>Name: " + name + "</p>" +
+                "<p>Email: " + email + "</p>" +
+                "<p>Age: " + age + "</p>";
+        }
+
+        // BONUS TASK
+        let users = [];
+
+        const registerUser = (event) => {
+            event.preventDefault();
+
+            const name =
+                document.getElementById("regName").value;
+
+            const password =
+                document.getElementById("regPass").value;
+
+            users.push({
+                name: name,
+                password: password
+            });
+
+            alert("User Registered Successfully");
+
+            document.getElementById("form").reset();
+        }
+
+        const loginUser = (event) => {
+            event.preventDefault();
+
+            const name =
+                document.getElementById("loginName").value;
+
+            const password =
+                document.getElementById("loginPass").value;
+
+            const user = users.find(
+                item =>
+                    item.name === name &&
+                    item.password === password
+            );
+
+            if (user) {
+                document.getElementById("message").innerText =
+                    "Welcome " + user.name;
+            } else {
+                document.getElementById("message").innerText =
+                    "Invalid Credentials";
+            }
+        }
+
+        const logoutUser = (event) => {
+            event.preventDefault();
+
+            document.getElementById("message").innerText =
+                "Logged Out Successfully";
+        }
+
+    </script>
 
 </body>
 </html>
-```
