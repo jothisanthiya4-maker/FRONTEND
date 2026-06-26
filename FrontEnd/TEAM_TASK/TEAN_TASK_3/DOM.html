@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tasks</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-100 py-10">
+
+<div class="max-w-5xl mx-auto px-5 space-y-8">
+
+    <!-- TASK 1 -->
+    <div class="bg-white p-6 rounded-xl shadow-lg space-y-4">
+        <h1 class="text-3xl font-bold text-blue-600">TASK 1</h1>
+
+        <h2 class="font-semibold">Enter Student Mark</h2>
+        <input type="number" id="studentMark"
+            class="w-full border p-3 rounded-lg">
+
+        <button onclick="check()"
+            class="bg-blue-500 text-white px-5 py-2 rounded-lg">
+            Check
+        </button>
+
+        <p id="show" class="font-semibold text-green-600"></p>
+    </div>
+
+    <!-- TASK 2 -->
+    <div class="bg-white p-6 rounded-xl shadow-lg space-y-4">
+        <h1 class="text-3xl font-bold text-blue-600">TASK 2</h1>
+
+        <h2 class="font-semibold">Odd or Even</h2>
+
+        <input type="number" id="oddEven"
+            class="w-full border p-3 rounded-lg">
+
+        <button onclick="oddOrEven()"
+            class="bg-blue-500 text-white px-5 py-2 rounded-lg">
+            Check
+        </button>
+
+        <p id="ans" class="font-semibold text-green-600"></p>
+    </div>
+
+    <!-- TASK 4 -->
+    <div class="bg-white p-6 rounded-xl shadow-lg space-y-4">
+        <h1 class="text-3xl font-bold text-blue-600">TASK 4</h1>
+
+        <h2 class="font-semibold">Highest Collection</h2>
+
+        <p id="highestResult"
+            class="text-2xl font-bold text-green-600"></p>
+    </div>
+
+    <!-- TASK 6 -->
+    <div class="bg-white p-6 rounded-xl shadow-lg space-y-4">
+        <h1 class="text-3xl font-bold text-blue-600">TASK 6</h1>
+
+        <input type="text"
+            id="welcomeName"
+            placeholder="Enter Name"
+            class="w-full border p-3 rounded-lg">
+
+        <button onclick="showWelcome()"
+            class="bg-blue-500 text-white px-5 py-2 rounded-lg">
+            Show Welcome
+        </button>
+
+        <h2 id="welcomeMessage"
+            class="font-semibold text-green-600"></h2>
+    </div>
+
+    <!-- TASK 7 -->
+    <div class="bg-white p-6 rounded-xl shadow-lg space-y-4">
+        <h1 class="text-3xl font-bold text-blue-600">TASK 7</h1>
+
+        <input type="text"
+            id="loginUsername"
+            placeholder="Enter Username"
+            class="w-full border p-3 rounded-lg">
+
+        <input type="password"
+            id="password"
+            placeholder="Enter Password"
+            onkeyup="checkPassword()"
+            class="w-full border p-3 rounded-lg">
+
+        <p id="passwordResult"></p>
+
+        <button onclick="login()"
+            class="bg-blue-500 text-white px-5 py-2 rounded-lg">
+            Login
+        </button>
+
+        <h2 id="loginResult"
+            class="font-semibold text-green-600"></h2>
+    </div>
+
+    <!-- TASK 8 -->
+    <div class="bg-white p-6 rounded-xl shadow-lg space-y-4">
+        <h1 class="text-3xl font-bold text-blue-600">TASK 8</h1>
+
+        <p class="hide flex">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+
+        <div class="flex gap-3">
+            <button onclick="hide()"
+                class="bg-red-500 text-white px-5 py-2 rounded-lg">
+                Hide
+            </button>
+
+            <button onclick="show()"
+                class="bg-green-500 text-white px-5 py-2 rounded-lg">
+                Show
+            </button>
+        </div>
+    </div>
+
+    <!-- TASK 9 -->
+    <div class="bg-white p-6 rounded-xl shadow-lg space-y-4">
+        <h1 class="text-3xl font-bold text-blue-600">TASK 9</h1>
+
+        <h1 id="task9Headind"
+            class="text-2xl font-bold p-3 rounded-lg">
+            This is Task 9
+        </h1>
+
+        <button onclick="changeColour()"
+            class="bg-blue-500 text-white px-5 py-2 rounded-lg">
+            Change Colour
+        </button>
+    </div>
+
+    <!-- TASK 10 -->
+    <div class="bg-white p-6 rounded-xl shadow-lg space-y-4">
+        <h1 class="text-3xl font-bold text-blue-600">TASK 10</h1>
+
+        <input type="text"
+            id="name"
+            placeholder="Name"
+            class="w-full border p-3 rounded-lg">
+
+        <input type="email"
+            id="email"
+            placeholder="Email"
+            class="w-full border p-3 rounded-lg">
+
+        <input type="number"
+            id="age"
+            placeholder="Age"
+            class="w-full border p-3 rounded-lg">
+
+        <button onclick="register()"
+            class="bg-blue-500 text-white px-5 py-2 rounded-lg">
+            Register
+        </button>
+
+        <div id="card"></div>
+    </div>
+
+    <!-- BONUS TASK -->
+    <div class="bg-white p-6 rounded-xl shadow-lg space-y-4">
+        <h1 class="text-3xl font-bold text-blue-600">
+            BONUS TASK
+        </h1>
+
+        <form id="form" class="space-y-4">
+
+            <h2 class="text-xl font-semibold">Register</h2>
+
+            <input type="text"
+                id="regName"
+                placeholder="Enter Name"
+                class="w-full border p-3 rounded-lg">
+
+            <input type="password"
+                id="regPass"
+                placeholder="Enter Password"
+                class="w-full border p-3 rounded-lg">
+
+            <button onclick="registerUser(event)"
+                class="bg-green-500 text-white px-5 py-2 rounded-lg">
+                Register
+            </button>
+
+            <h2 class="text-xl font-semibold">Login</h2>
+
+            <input type="text"
+                id="loginName"
+                placeholder="Enter Name"
+                class="w-full border p-3 rounded-lg">
+
+            <input type="password"
+                id="loginPass"
+                placeholder="Enter Password"
+                class="w-full border p-3 rounded-lg">
+
+            <div class="flex gap-3">
+                <button onclick="loginUser(event)"
+                    class="bg-blue-500 text-white px-5 py-2 rounded-lg">
+                    Login
+                </button>
+
+                <button onclick="logoutUser(event)"
+                    class="bg-red-500 text-white px-5 py-2 rounded-lg">
+                    Logout
+                </button>
+            </div>
+
+            <h2 id="message"
+                class="font-semibold text-green-600"></h2>
+
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
+```
