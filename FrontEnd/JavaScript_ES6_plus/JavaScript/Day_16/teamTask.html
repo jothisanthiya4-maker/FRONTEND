@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../assets/js/teamTask.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body id="body" style="margin: 0; padding: 0; box-sizing: border-box;">
+    
+    <center style="display: flex; flex-direction: column; align-items: center; gap: 30px;">
+
+        <!-- task 1 -->
+         <h1>task 1</h1>
+        <input type="text" placeholder="enter something" style="height: 30px; width: 500px;" id="lengthInput" onchange="characterLength()">
+
+        <!-- task 2 -->
+        <h1>task 2</h1>
+        <input type="number" placeholder="enter age" style="height: 30px; width: 500px;" id="ageInput">
+        <button id="ageButton" onclick="ageCheck()">check age</button>
+
+        <!-- task 3 -->
+        <h1>task 3</h1>
+        <button id="toggleButton" onclick="themeToggle()">click to change theme</button>
+
+        <!-- task 4 -->
+        <h1>task 4</h1>
+        <input type="number" placeholder="enter ticket count" style="height: 30px; width: 500px;" id="ticketInput">
+        <button id="ticketButton" onclick="ticketCheck()">check ticket amount</button>
+
+
+        <!-- task 5 -->
+        <h1>task 5</h1>
+        <input type="text" id="cardName" placeholder="enter name ">
+        <input type="text" id="cardRole" placeholder="enter your role">
+        <input type="text" id="cardCompany" placeholder="enter company name">
+        <button onclick="profile()">view profile</button>
+        <h2 id="name"></h2>
+        <h2 id="role"></h2>
+        <h2 id="company"></h2>
+    </center>
+    
+</body>
+</html>

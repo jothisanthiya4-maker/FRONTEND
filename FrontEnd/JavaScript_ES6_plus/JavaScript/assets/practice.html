@@ -79,8 +79,42 @@
     }
     
 
-    
+    // 
+
+    const arr1=[1,2,3,[1,2,3],4,5,[6],]
+    let newArr=[]
+    for(let i in arr1){
+        if(typeof arr1[i]=="object"){
+            for(let j in arr1[i]){
+                newArr.push(arr1[i][j])
+            }
+        }
+        else{
+            newArr.push(arr1[i])
+        }
+
+    }
+    console.log("flatten array is", newArr);
     
 
+    // 
+
+
+    const arraySeparation=["react","node","1","2"]
+    const stringArray=[]
+    const numbeArray=[]
+    for(let i in arraySeparation ){
+        if(isNaN(arraySeparation[i])){
+            stringArray.push(arraySeparation[i])
+        }
+        else{
+            numbeArray.push(arraySeparation[i])
+        }
+    }
+    console.log("string values are :",stringArray);
+    console.log("numbers are :",numbeArray);
+    
+    
+    
 
 </script>
