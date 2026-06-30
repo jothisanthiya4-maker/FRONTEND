@@ -63,3 +63,52 @@ const profile=()=>{
     document.getElementById("cardCompany").value=""
 
 }
+
+// task 6
+
+const searchHero=()=>{
+    let heros=["Vijay","Ajith","Suriya","SK","Dhanush"]
+    const heroName=document.getElementById("heroInput").value
+    const final = heros.find((e)=>e ==heroName)
+        if(final){
+          document.getElementById("text").innerText= final + "found in array"  
+        }
+        else{
+            document.getElementById("text").innerText=" not found in array"
+        }
+    
+}
+
+// task 7
+
+const luckyNumber=()=>{
+    let luckNumbers =[7,14,21,28]
+    const inpNumber=document.getElementById("getNumber").value
+    const found=luckNumbers.find((e)=>{
+       return  e==inpNumber
+        
+    })
+    if(found){
+        document.getElementById("foundLucky").innerText= `${found}  is a lucky number`
+
+    }
+    else{
+        document.getElementById("foundLucky").textContent=" number is not a lucky number"
+       
+    }
+}
+
+// task 8
+
+const product=()=>{
+    productName="mobile"
+    quantity=1
+    price=40000
+    document.getElementById("pName").innerText="product : "  + productName
+    document.getElementById("quntity").innerText="quantity : "  + quantity
+    document.getElementById("price").innerText="price : "  + price
+    document.getElementById("btn").style.display="none"
+}
+
+// task 9
+
