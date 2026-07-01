@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>HTML</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <style>
+         body{
+         background:#f5f6fc;
+         font-family:Arial;
+         }
+         /* cards */
+         .card{
+         background:white;
+         border-radius:20px;
+         padding:35px;
+         box-shadow:
+         0px 2px 10px
+         rgba(0,0,0,.08);
+         transition:.4s;
+         display:block;
+         text-decoration:none;
+         color:black;
+         overflow:hidden;
+         }
+         .card:hover{
+         transform:
+         translateY(-10px);
+         box-shadow:
+         0px 10px 25px
+         rgba(0,0,0,.15);
+         }
+         .btn{
+         padding:12px;
+         border-radius:10px;
+         margin-top:30px;
+         transition:.3s;
+         }
+         .card:hover .btn{
+         transform:scale(1.03);
+         }
+      </style>
+   </head>
+   <body>
+      <section class="py-16">
+         <div class="text-center">
+            <h1 class="text-7xl font-bold">
+               Challenge 
+               <span class="text-indigo-600">
+               Zone
+               </span>
+            </h1>
+            <p class="mt-6 text-gray-500 text-2xl">
+               Explore all my daily Test Cases Solutions
+            </p>
+         </div>
+         <div class="
+            max-w-7xl
+            mx-auto
+            grid
+            grid-cols-3
+            gap-8
+            mt-20
+            px-10
+            ">
+            <a
+               href="../../Challenge_Zone/bookedSeatTestcase.html"
+               class="card"
+               >
+               <span class="
+                  bg-indigo-100
+                  text-indigo-600
+                  px-5
+                  py-2
+                  rounded-xl
+                  ">
+               Task 1
+               </span>
+               <h2 class="
+                  text-5xl
+                  font-bold
+                  mt-10
+                  ">
+                  Available bus seats
+               </h2>
+               <div class="
+                  w-12
+                  h-1
+                  bg-indigo-500
+                  mt-5
+                  ">
+               </div>
+              
+               <div class="
+                  btn
+                  bg-indigo-50
+                  text-indigo-600
+                  flex
+                  justify-between
+                  ">
+                  View Task
+                  →
+               </div>
+            </a>
+            
+         </div>
+      </section>
+   </body>
+</html>

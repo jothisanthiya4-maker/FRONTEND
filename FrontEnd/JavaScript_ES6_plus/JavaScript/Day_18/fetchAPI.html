@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,tr,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
+</head>
+    <body>
+    
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Todo</th>
+            <th>Completed</th>
+            <th>UserId</th>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+
+    <script>
+
+        const fetchData=async()=>{
+
+            const api=await fetch("https://dummyjson.com/todos")
+                // console.log(api);
+            const parseData= await api.json()
+            // console.log(parseData);
+            const arrObj=parseData.todos
+            // console.log(arrObj);
+            
+            const data =document.getElementById("tableBody")
+            arrObj.forEach((element,i) => {
+                
+                data.innerHTML += `
+                <tr>
+                <td>${element.id}</td>
+                <td>${element.todo}</td>
+                <td>${element.completed}</td>
+                <td>${element.userId}</td>
+                </tr>`
+            });
+                
+            
+        }
+
+        fetchData()
+
+    </script>
+</body>
+</html>
