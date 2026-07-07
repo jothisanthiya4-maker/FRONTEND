@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1 >Return the index of sum target </h1></center>
+    <script>
+        let nums = [2,7,11,15]
+        target = 9
+        sum=[]
+        for(let i=0;i<nums.length;i++){
+            for(let j=i+1;j<nums.length;j++){
+                if(nums[i]+nums[j]==target){
+                    sum.push(i)
+                    sum.push(j)
+                }
+            }
+        }
+        console.log(sum);
+        
+
+    </script>
+</body>
+</html>
