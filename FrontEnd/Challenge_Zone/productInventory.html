@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1 >Product Inventory </h1></center>
+
+    <script>
+        const products = [
+  { id: 1, name: "Laptop", stock: 5 },
+  { id: 2, name: "Mobile", stock: 0 },
+  { id: 3, name: "Watch", stock: 8 },
+  { id: 4, name: "Keyboard", stock: 0 }
+];
+ let available=0
+let outofstock=0
+for(let i=0;i<products.length;i++){
+    if(products[i].stock==0){
+        outofstock+=1
+    }
+    else{
+        available+=1
+    }
+}
+console.log("total products :",products.length);
+console.log("Available products :",available);
+console.log("out of stock :",outofstock);
+
+
+
+    </script>
+</body>
+</html>
