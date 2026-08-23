@@ -79,9 +79,9 @@
     }
     
 
-    // 
+    // flatten the array 
 
-    const arr1=[1,2,3,[1,2,3],4,5,[6],]
+    const arr1=[1,2,3,[1,2,3],4,5,[6]]
     let newArr=[]
     for(let i in arr1){
         if(typeof arr1[i]=="object"){
@@ -97,7 +97,7 @@
     console.log("flatten array is", newArr);
     
 
-    // 
+    // separating number and string
 
 
     const arraySeparation=["react","node","1","2"]
@@ -115,6 +115,206 @@
     console.log("numbers are :",numbeArray);
     
     
+    // second largest number 
+
+    let arr3=[5,4,7,9,2,0]
+
+    for(let i=0;i<arr3.length;i++){
+        for(let j=i+1;j<arr3.length;j++){
+            if(arr3[i]<arr3[j]){
+                let temp=arr3[i]
+                arr3[i]=arr3[j]
+                arr3[j]=temp
+            }
+        }
+    }
+    console.log("second largest number is :", arr3[1]);
+
+    // vowels 
+
+    let str = "hello";
+    let vowels = "aeiou";
+    let re=""
+
+for (let i = 0; i < str.length; i++) {
+    for (let j = 0; j < vowels.length; j++) {
+        if (str[i] == vowels[j]) {
+            re += str[i]
+        }
+    }
+}
+
+console.log(re);
+
+// palindrome 
+
+let word ="jothi"
+let rev=""
+
+for(let i=word.length-1;i>=0;i--){
+    rev+=word[i]
+}
+
+if(word==rev){
+    console.log('it is palindrome');
     
+}
+else{
+    console.log('not palindrome');
+    
+}
+
+// frequency of letters
+
+let string ="madam"
+let counted = ""
+
+for(let i=0;i<string.length;i++){
+    
+    let alreadyexist=false
+
+    for(let j=0;j<counted.length;j++){
+
+        if(string[i]==counted[j]){
+            alreadyexist=true
+        }
+    }
+
+    if(!alreadyexist){
+        let count=0
+
+        for(let j=0;j<string.length;j++){
+            if(string[i]==string[j]){
+                count++
+            }
+        }
+        console.log(string[i], ":",count );
+        counted+=string[i]
+    }
+}
+ 
+
+// duplicate array element
+
+let arr4 = [2, 3, 4, 1, 2, 3];
+let result = [];
+
+for (let i = 0; i < arr4.length; i++) {
+
+    let duplicate = false;
+
+    for (let j = 0; j < result.length; j++) {
+
+        if (arr4[i] == result[j]) {
+            duplicate = true;
+        }
+    }
+
+    if (!duplicate) {
+        result[result.length] = arr4[i];
+    }
+}
+
+console.log(result);
+
+// factorial
+
+let num = 5;
+let factorial = 1;
+
+for (let i = num; i>=1; i--) {
+    factorial = factorial * i;
+}
+
+console.log(factorial);
+
+// word count
+
+let str2 = "hello world how are you";
+let count=0
+for(let i=0;i<str2.length;i++){
+    if(str2[i]==" "){
+        count++
+    }
+}
+
+console.log(count);
+
+// first non repeating character 
+
+let words="swiss"
+
+let nr=""
+
+for(let i=0;i<words.length;i++){
+   let  repeat=false
+    for(let j=0;j<words.length;j++){
+        if(i != j && words[i]==words[j]){
+            repeat=true
+        }
+    }
+
+    if(!repeat){
+        nr+=words[i]
+    }
+}
+
+console.log(nr[0]);
+
+// reverse words in sentence 
+
+let sentence= "i love javascript"
+let word1 =""
+let result1=""
+
+for(let i=sentence.length-1;i>=0;i--){
+    if(sentence[i]!=" "){
+        word1=sentence[i]+word1
+    }
+    else{
+        result1 = result1 + word1 +" "
+        word1= ""
+    }
+}
+result1 += word1
+console.log(result1);
+
+// sum of all even numbers 
+
+let numbers=[10,15,20,25,30,35]
+let sum=0
+
+for(let i=0;i<numbers.length;i++){
+    if(numbers[i]%2==0){
+        sum += numbers[i]
+    }
+}
+console.log(sum);
+
+// most repeated element in array 
+
+let arrr = [1, 2, 3, 2, 4, 2, 3];
+
+let mostnum=arr[0]
+let max=0
+
+for(let i=0;i<arrr.length;i++){
+    let count=0
+    for(let j=0;j<arrr.length;j++){
+        if(arrr[i]==arrr[j]){
+            count++
+        }
+    }
+    if(count>max){
+        mostnum=arrr[i]
+        max=count
+    }
+}
+
+console.log(mostnum + ":" + max);
+
+
+
+
 
 </script>
